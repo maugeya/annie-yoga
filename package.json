@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "yarn manage test -v 2",
+    "start": "yarn webserver",
+    "fresh-start": "yarn webserver --build",
+    "webserver": "docker-compose up",
+    "manage": "docker-compose run backend python manage.py"
+  }
+}
