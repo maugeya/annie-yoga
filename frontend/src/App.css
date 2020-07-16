@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Varta&display=swap");
+
+.App {
+  text-align: center;
+}
+
+p,
+h1,
+h2,
+h3,
+li {
+  font-family: "Varta", sans-serif;
+}
