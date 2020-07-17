@@ -15,19 +15,13 @@ export default function NavBar() {
       </div>
       <ul className={styles.navLinkList}>
         <li>
-          <a href="https://google.com">
-            <span className={styles.navLinkText}>About</span>
-          </a>
+          <a href="https://google.com">About</a>
         </li>
         <li>
-          <a href="https://google.com">
-            <span className={styles.navLinkText}>Classes</span>
-          </a>
+          <a href="https://google.com">Classes</a>
         </li>
         <li>
-          <a href="https://google.com">
-            <span className={styles.navLinkText}>Retreats</span>
-          </a>
+          <a href="https://google.com">Retreats</a>
           <ul className={styles.retreatMenu}>
             <li>
               <a href="https://google.com">Tuscan hills</a>
@@ -38,19 +32,13 @@ export default function NavBar() {
           </ul>
         </li>
         <li>
-          <a href="https://google.com">
-            <span className={styles.navLinkText}>Corporate</span>
-          </a>
+          <a href="https://google.com">Corporate</a>
         </li>
         <li>
-          <a href="https://google.com">
-            <span className={styles.navLinkText}>Food</span>
-          </a>
+          <a href="https://google.com">Food</a>
         </li>
         <li>
-          <a href="https://google.com">
-            <span className={styles.navLinkText}>Blog</span>
-          </a>
+          <a href="https://google.com">Blog</a>
         </li>
       </ul>
     </div>
