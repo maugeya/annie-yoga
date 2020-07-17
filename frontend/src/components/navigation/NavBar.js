@@ -3,24 +3,31 @@ import styles from "./NavBar.module.css"
 
 export default function NavBar() {
   return (
-    <nav className={styles.container}>
+    <div className={styles.container}>
       <div className={styles.logoContainer}>
         <a href="https://google.com">
           <img
             className={styles.logo}
             src={require("../../assets/annie-logo.png")}
+            alt="Annie May Rice logo"
           />
         </a>
       </div>
       <ul className={styles.navLinkList}>
         <li>
-          <a href="https://google.com">About</a>
+          <a href="https://google.com">
+            <span className={styles.navLinkText}>About</span>
+          </a>
         </li>
         <li>
-          <a href="https://google.com">Classes</a>
+          <a href="https://google.com">
+            <span className={styles.navLinkText}>Classes</span>
+          </a>
         </li>
         <li>
-          <a href="https://google.com">Retreats</a>
+          <a href="https://google.com">
+            <span className={styles.navLinkText}>Retreats</span>
+          </a>
           <ul className={styles.retreatMenu}>
             <li>
               <a href="https://google.com">Tuscan hills</a>
@@ -31,15 +38,21 @@ export default function NavBar() {
           </ul>
         </li>
         <li>
-          <a href="https://google.com">Corporate</a>
+          <a href="https://google.com">
+            <span className={styles.navLinkText}>Corporate</span>
+          </a>
         </li>
         <li>
-          <a href="https://google.com">Food</a>
+          <a href="https://google.com">
+            <span className={styles.navLinkText}>Food</span>
+          </a>
         </li>
         <li>
-          <a href="https://google.com">Blog</a>
+          <a href="https://google.com">
+            <span className={styles.navLinkText}>Blog</span>
+          </a>
         </li>
       </ul>
-    </nav>
+    </div>
   )
 }
