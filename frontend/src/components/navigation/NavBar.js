@@ -1,4 +1,6 @@
 import React from "react"
+import { BrowserRouter as Router, Link } from "react-router-dom"
+
 import styles from "./NavBar.module.css"
 
 export default function NavBar() {
@@ -15,30 +17,30 @@ export default function NavBar() {
       </div>
       <ul className={styles.navLinkList}>
         <li>
-          <a href="https://google.com">About</a>
+          <Link to="/">About</Link>
         </li>
         <li>
-          <a href="https://google.com">Classes</a>
+          <Link to="/classes">Classes</Link>
         </li>
         <li>
-          <a href="https://google.com">Retreats</a>
+          <Link to="/retreats">Retreats</Link>
           <ul className={styles.retreatMenu}>
             <li>
-              <a href="https://google.com">Tuscan hills</a>
+              <Link to="/retreats/tuscan-hills">Tuscan Hills</Link>
             </li>
             <li>
-              <a href="https://google.com">Fire and Water</a>
+              <Link to="/retreats/fire-and-water">About</Link>
             </li>
           </ul>
         </li>
         <li>
-          <a href="https://google.com">Corporate</a>
+          <Link to="/corporate">Corporate</Link>
         </li>
         <li>
-          <a href="https://google.com">Food</a>
+          <Link to="/food">Food</Link>
         </li>
         <li>
-          <a href="https://google.com">Blog</a>
+          <Link to="/blog">Blog</Link>
         </li>
       </ul>
     </div>
