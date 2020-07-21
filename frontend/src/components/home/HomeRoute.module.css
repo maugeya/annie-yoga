@@ -21,9 +21,19 @@
 }
 
 .annieTitle:after {
+  animation: drawBorder 2s ease forwards;
   border-bottom: 2px solid #edbb48;
   content: "";
   display: block;
   margin-left: 25%;
   width: 50%;
+}
+
+@keyframes drawBorder {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
