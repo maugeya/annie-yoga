@@ -11,16 +11,19 @@ export default function NavBar({ scrollY }) {
   const darkNav = isPastScrollMin(scrollY)
 
   return (
-    <div className={scrollY < 87.84 ? styles.container : styles.containerDark}>
-      <div className={styles.logoContainer}>
-        <a href="https://google.com">
-          <img
-            className={styles.logo}
-            src={require("../../assets/annie-logo.png")}
-            alt="Annie May Rice logo"
-          />
-        </a>
-      </div>
+    <div className={darkNav ? styles.containerDark : styles.container}>
+      {darkNav && (
+        <div className={styles.logoContainer}>
+          <a href="https://google.com">
+            <img
+              className={styles.logo}
+              src={require("../../assets/annie-logo.png")}
+              alt="Annie May Rice logo"
+            />
+          </a>
+        </div>
+      )}
+
       <ul className={styles.navLinkList}>
         <li>
           <Link to="/">About</Link>
