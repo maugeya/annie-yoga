@@ -1,6 +1,9 @@
 .container {
   display: flex;
-  /* height: 100vh; */
+}
+
+.container > div {
+  margin: 5px;
 }
 
 .sectionTitle {
@@ -9,4 +12,13 @@
 
 .sectionContent {
   flex: 2;
+  text-align: left;
+}
+
+.leftParitialUnderline:after {
+  border-bottom: 2px solid var(--orange);
+  content: "";
+  display: block;
+  margin-left: 14%;
+  width: 30%;
 }
