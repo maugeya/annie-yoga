@@ -12,12 +12,12 @@ import BlogRoute from "./components/blog/BlogRoute"
 import useScroll from "./hooks/useScroll"
 
 function App() {
-  const scrollY = useScroll()
+  const scrollYPercentage = useScroll()
 
   return (
     <Router>
       <div className="App">
-        <NavBar scrollY={scrollY} />
+        <NavBar scrollYPercentage={scrollYPercentage} />
         <Switch>
           <Route path="/blog">
             <BlogRoute />
