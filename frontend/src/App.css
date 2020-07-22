@@ -5,11 +5,21 @@
   --primary-dark: #282828;
   --secondary-dark: #59646b;
   --primary-light: #e7e6e6;
+  --green: #89aaa9;
+  --orange: #fdb768;
   --animate-border-line: drawBorder 2s ease forwards;
 }
 
 .App {
   text-align: center;
+}
+
+.darkTitle {
+  color: var(--primary-dark);
+}
+
+.inlineLink {
+  color: var(--green);
 }
 
 body {
@@ -24,6 +34,8 @@ h3 {
 
 p {
   color: var(--primary-dark);
+  font-size: 18px;
+  line-height: 26px;
 }
 
 h1 {
