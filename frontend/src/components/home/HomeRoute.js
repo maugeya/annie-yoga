@@ -1,7 +1,11 @@
 import React from "react"
+import { Parallax, Background } from "react-parallax"
 
 import styles from "./HomeRoute.module.css"
 import About from "./About"
+import annieWarrior from "../../assets/annie-warrior-crop.png"
+import YogaBackground from "./YogaBackground"
+import ParallaxImage from "../common/ParallaxImage"
 
 export default function HomeRoute() {
   return (
@@ -14,6 +18,8 @@ export default function HomeRoute() {
         </div>
       </div>
       <About />
+      <ParallaxImage image={annieWarrior} />
+      <YogaBackground />
     </div>
   )
 }
