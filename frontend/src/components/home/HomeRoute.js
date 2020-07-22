@@ -9,7 +9,7 @@ export default function HomeRoute() {
       <div className={styles.jumboContainer}>
         <div className={styles.mainImage} />
         <div className={styles.textOverlay}>
-          <h1 className={styles.annieTitle}>Annie May Rice</h1>
+          <h1 className={styles.animatedUnderline}>Annie May Rice</h1>
           <h2>Yoga</h2>
         </div>
       </div>
