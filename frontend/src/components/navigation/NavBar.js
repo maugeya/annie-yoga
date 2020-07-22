@@ -4,6 +4,12 @@ import { Link } from "react-router-dom"
 import styles from "./NavBar.module.css"
 
 export default function NavBar({ scrollY }) {
+  const isPastScrollMin = (scrollY) => {
+    return scrollY > 87.84
+  }
+
+  const darkNav = isPastScrollMin(scrollY)
+
   return (
     <div className={scrollY < 87.84 ? styles.container : styles.containerDark}>
       <div className={styles.logoContainer}>
