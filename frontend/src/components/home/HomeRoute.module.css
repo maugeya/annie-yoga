@@ -20,20 +20,11 @@
   top: 60%;
 }
 
-.annieTitle:after {
-  animation: drawBorder 2s ease forwards;
-  border-bottom: 2px solid var(--gold);
+.animatedUnderline:after {
+  animation: var(--animate-border-line);
+  border-bottom: 2px solid var(--orange);
   content: "";
   display: block;
   margin-left: 25%;
   width: 50%;
-}
-
-@keyframes drawBorder {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
 }
