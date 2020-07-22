@@ -17,13 +17,9 @@
 }
 
 .containerDark {
-  background-color: #282828;
+  background-color: var(--primary-dark);
   justify-content: space-between;
   transition: 0.3s;
-}
-
-.darkNav {
-  background-color: red;
 }
 
 .logoContainer {
@@ -56,15 +52,14 @@
 }
 
 .navLinkList > li > a:hover {
-  /* background: #333232; */
   border-radius: 4px;
-  color: #edbb48;
+  color: var(--gold);
   transition: 0.3s;
 }
 
 .navLinkList > li > a {
   align-items: center;
-  color: #e7e6e6;
+  color: var(--primary-light);
   display: flex;
   font-weight: bold;
   height: 100%;
