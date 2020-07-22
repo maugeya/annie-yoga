@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"
 
 import styles from "./NavBar.module.css"
 
-export default function NavBar() {
+export default function NavBar({ scrollY }) {
   return (
-    <div className={styles.container}>
+    <div className={scrollY < 87.84 ? styles.container : styles.containerDark}>
       <div className={styles.logoContainer}>
         <a href="https://google.com">
           <img

@@ -1,5 +1,5 @@
-.container {
-  background-color: transparent;
+.container,
+.containerDark {
   display: flex;
   height: 80px;
   justify-content: space-between;
@@ -9,6 +9,20 @@
   top: 0;
   right: 0;
   z-index: 2;
+}
+
+.container {
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.containerDark {
+  background-color: #282828;
+  transition: 0.3s;
+}
+
+.darkNav {
+  background-color: red;
 }
 
 .logoContainer {
