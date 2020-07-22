@@ -15,6 +15,10 @@
   text-align: left;
 }
 
+.leftPartialUnderline {
+  text-align: left;
+}
+
 .leftPartialUnderline:after {
   border-bottom: 2px solid var(--orange);
   content: "";
