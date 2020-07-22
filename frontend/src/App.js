@@ -9,12 +9,15 @@ import RetreatsRoute from "./components/retreats/RetreatsRoute"
 import CorporateRoute from "./components/corporate/CorporateRoute"
 import FoodRoute from "./components/food/FoodRoute"
 import BlogRoute from "./components/blog/BlogRoute"
+import useScroll from "./hooks/useScroll"
 
 function App() {
+  const scrollY = useScroll()
+
   return (
     <Router>
       <div className="App">
-        <NavBar />
+        <NavBar scrollY={scrollY} />
         <Switch>
           <Route path="/blog">
             <BlogRoute />
