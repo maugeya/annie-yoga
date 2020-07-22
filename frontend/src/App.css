@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
 
+:root {
+  --gold: #edbb48;
+  --primary-dark: #282828;
+  --primary-light: #e7e6e6;
+}
+
 .App {
   text-align: center;
 }
