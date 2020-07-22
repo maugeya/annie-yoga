@@ -5,6 +5,7 @@
   --primary-dark: #282828;
   --secondary-dark: #59646b;
   --primary-light: #e7e6e6;
+  --animate-border-line: drawBorder 2s ease forwards;
 }
 
 .App {
@@ -31,4 +32,13 @@ h1 {
 
 h2 {
   font-size: 45px;
+}
+
+@keyframes drawBorder {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
