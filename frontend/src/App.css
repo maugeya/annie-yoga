@@ -10,13 +10,19 @@
   text-align: center;
 }
 
+body {
+  font-family: "Didact Gothic", sans-serif;
+}
+
 p,
 h1,
 h2,
-h3,
-li {
-  font-family: "Didact Gothic", sans-serif;
+h3 {
   margin: 0;
+}
+
+p {
+  color: var(--primary-dark);
 }
 
 h1 {
