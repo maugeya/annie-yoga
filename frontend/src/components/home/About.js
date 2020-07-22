@@ -8,7 +8,7 @@ export default function About() {
     <Layout>
       <section id="#about" className={styles.container}>
         <div className={styles.sectionTitle}>
-          <h1 className={`darkTitle ${styles.leftParitialUnderline}`}>
+          <h1 className={`darkTitle ${styles.leftPartialUnderline}`}>
             ABOUT ME
           </h1>
         </div>

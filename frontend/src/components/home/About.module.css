@@ -15,10 +15,9 @@
   text-align: left;
 }
 
-.leftParitialUnderline:after {
+.leftPartialUnderline:after {
   border-bottom: 2px solid var(--orange);
   content: "";
   display: block;
-  margin-left: 14%;
   width: 30%;
 }
