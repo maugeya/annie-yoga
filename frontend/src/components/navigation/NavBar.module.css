@@ -2,7 +2,6 @@
 .containerDark {
   display: flex;
   height: 80px;
-  justify-content: space-between;
   left: 0;
   padding: 0 50px;
   position: fixed;
@@ -13,11 +12,13 @@
 
 .container {
   background-color: transparent;
+  justify-content: flex-end;
   transition: 0.3s;
 }
 
 .containerDark {
   background-color: #282828;
+  justify-content: space-between;
   transition: 0.3s;
 }
 
