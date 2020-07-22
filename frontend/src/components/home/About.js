@@ -8,7 +8,9 @@ export default function About() {
     <Layout>
       <section id="#about" className={styles.container}>
         <div className={styles.sectionTitle}>
-          <h1>ABOUT ME</h1>
+          <h1 className={`darkTitle ${styles.leftParitialUnderline}`}>
+            ABOUT ME
+          </h1>
         </div>
         <div className={styles.sectionContent}>
           <p>
@@ -26,7 +28,13 @@ export default function About() {
           </p>
           <p>
             If you’d like to get in touch about anything, please do. You can
-            email me at <span>anniemayrice@gmail.com</span>
+            email me at{" "}
+            <a
+              className="inlineLink"
+              href="mailto:anniemayrice@gmail.com?subject=Message from website"
+            >
+              anniemayrice@gmail.com
+            </a>
           </p>
           <p>PEACE.</p>
         </div>
