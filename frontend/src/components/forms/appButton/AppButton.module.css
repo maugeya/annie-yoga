@@ -1,0 +1,18 @@
+.buttonGreen {
+  background-color: var(--light-green);
+}
+
+.appButton {
+  border: 1px solid var(--dark-green);
+  border-radius: 3px;
+  font-size: inherit;
+  font-weight: bold;
+  height: 46px;
+  transition: 0.2s;
+  width: 174px;
+}
+
+.appButton:hover {
+  background-color: var(--dark-green);
+  transition: 0.2s;
+}
