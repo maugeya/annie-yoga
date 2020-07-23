@@ -4,7 +4,7 @@ import styles from "./HomeRoute.module.css"
 import About from "./About"
 import annieWarrior from "../../assets/annie-warrior-crop.png"
 import YogaBackground from "./YogaBackground"
-import ParallaxImage from "../common/ParallaxImage"
+import ParallaxImage from "../common/parallaxImage/ParallaxImage"
 import Subscribe from "./Subscribe"
 
 export default function HomeRoute() {
