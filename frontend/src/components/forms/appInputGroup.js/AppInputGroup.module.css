@@ -1,0 +1,9 @@
+.input {
+  background: transparent;
+  border-style: none;
+  border-bottom: 2px solid var(--orange);
+  color: var(--primary-light);
+  font-size: inherit;
+  height: 46px;
+  width: 360px;
+}
