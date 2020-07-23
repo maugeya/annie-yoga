@@ -1,5 +1,4 @@
 import React from "react"
-import { Parallax, Background } from "react-parallax"
 
 import styles from "./HomeRoute.module.css"
 import About from "./About"
