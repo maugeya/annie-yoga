@@ -1,9 +1,9 @@
 import React from "react"
 
-import styles from "./About.module.css"
+import styles from "./AboutSection.module.css"
 import Layout from "../layout/Layout"
 
-export default function About() {
+export default function AboutSection() {
   return (
     <Layout>
       <section id="#about" className={styles.container}>
