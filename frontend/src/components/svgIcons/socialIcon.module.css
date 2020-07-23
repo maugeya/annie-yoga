@@ -1,0 +1,9 @@
+.iconContainer {
+  height: 30px;
+  padding-left: 15px;
+  width: 30px;
+}
+
+svg {
+  fill: var(--secondary-dark);
+}
