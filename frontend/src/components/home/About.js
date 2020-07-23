@@ -32,6 +32,8 @@ export default function About() {
             <a
               className="inlineLink"
               href="mailto:anniemayrice@gmail.com?subject=Message from website"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               anniemayrice@gmail.com
             </a>
