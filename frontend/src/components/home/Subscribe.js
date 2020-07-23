@@ -3,8 +3,14 @@ import React from "react"
 import styles from "./Subscribe.module.css"
 import formStyles from "../forms/forms.module.css"
 import SubmitButton from "../forms/submitButton/SubmitButton"
+import AppInput from "../forms/appInputGroup.js/AppInputGroup"
 
 export default function Subscribe() {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log("form submitted!")
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
@@ -14,13 +20,8 @@ export default function Subscribe() {
         </p>
       </div>
 
-      <form className={formStyles.form}>
-        <div className={formStyles.formGroup}>
-          <label>
-            Email:
-            <input type="email" />
-          </label>
-        </div>
+      <form className={formStyles.form} onSubmit={handleSubmit}>
+        <AppInput type="email" label="Email:" />
         <div className={formStyles.formSubmit}>
           <SubmitButton title="Subscribe" />
         </div>
