@@ -1,0 +1,28 @@
+.container {
+  align-items: center;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  padding: 8px 40px;
+}
+
+.contributers {
+  text-align: left;
+}
+
+.contributers > p {
+  margin: 0;
+}
+
+.socialMedias {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contributers,
+.websiteContributer,
+.socialMedias {
+  flex: 1;
+}
