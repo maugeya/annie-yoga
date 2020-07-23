@@ -1,0 +1,7 @@
+.errorMessageContainer {
+  display: flex;
+}
+
+.errorMessage {
+  color: red;
+}
