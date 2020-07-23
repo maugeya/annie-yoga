@@ -26,6 +26,7 @@
 }
 
 body {
+  color: var(--primary-dark);
   font-family: "Didact Gothic", sans-serif;
 }
 
@@ -36,7 +37,6 @@ h3 {
 }
 
 p {
-  color: var(--primary-dark);
   font-size: 18px;
   line-height: 26px;
 }
