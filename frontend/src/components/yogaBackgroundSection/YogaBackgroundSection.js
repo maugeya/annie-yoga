@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../layout/Layout"
-import styles from "./AboutSection.module.css"
+import styles from "../aboutSection/AboutSection.module.css"
 
 export default function YogaBackground() {
   return (
