@@ -10,10 +10,10 @@ import SubscribeSection from "../subscribeSection/SubscribeSection"
 export default function HomeRoute() {
   return (
     <div className={styles.container}>
-      <div className={styles.jumboContainer}>
+      <div className="jumboContainer">
         <div className={styles.mainImage} />
-        <div className={styles.textOverlay}>
-          <h1 className={styles.animatedUnderline}>Annie May Rice</h1>
+        <div className="rightTextOverlay">
+          <h1 className="animatedUnderline">Annie May Rice</h1>
           <h2>Yoga</h2>
         </div>
       </div>
