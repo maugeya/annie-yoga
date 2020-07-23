@@ -1,11 +1,11 @@
 import React from "react"
 
-import styles from "./Subscribe.module.css"
+import styles from "./SubscribeSection.module.css"
 import formStyles from "../forms/forms.module.css"
 import SubmitButton from "../forms/submitButton/SubmitButton"
 import AppInput from "../forms/appInputGroup.js/AppInputGroup"
 
-export default function Subscribe() {
+export default function SubscribeSection() {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log("form submitted!")
