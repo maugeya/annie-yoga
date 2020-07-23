@@ -1,11 +1,11 @@
 import React from "react"
 
 import styles from "./HomeRoute.module.css"
-import About from "./About"
+import AboutSection from "../aboutSection/AboutSection"
 import annieWarrior from "../../assets/annie-warrior-crop.png"
-import YogaBackground from "./YogaBackground"
+import YogaBackgroundSection from "../yogaBackgroundSection/YogaBackgroundSection"
 import ParallaxImage from "../common/parallaxImage/ParallaxImage"
-import Subscribe from "./Subscribe"
+import SubscribeSection from "../subscribeSection/SubscribeSection"
 
 export default function HomeRoute() {
   return (
@@ -17,10 +17,10 @@ export default function HomeRoute() {
           <h2>Yoga</h2>
         </div>
       </div>
-      <About />
+      <AboutSection />
       <ParallaxImage image={annieWarrior} />
-      <YogaBackground />
-      <Subscribe />
+      <YogaBackgroundSection />
+      <SubscribeSection />
     </div>
   )
 }
