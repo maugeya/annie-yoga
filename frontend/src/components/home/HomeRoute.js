@@ -6,6 +6,7 @@ import About from "./About"
 import annieWarrior from "../../assets/annie-warrior-crop.png"
 import YogaBackground from "./YogaBackground"
 import ParallaxImage from "../common/ParallaxImage"
+import Subscribe from "./Subscribe"
 
 export default function HomeRoute() {
   return (
@@ -20,6 +21,7 @@ export default function HomeRoute() {
       <About />
       <ParallaxImage image={annieWarrior} />
       <YogaBackground />
+      <Subscribe />
     </div>
   )
 }
