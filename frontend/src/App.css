@@ -22,6 +22,7 @@
 
 .inlineLink {
   color: var(--green);
+  text-decoration: none;
 }
 
 body {
