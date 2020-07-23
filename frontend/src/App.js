@@ -10,6 +10,7 @@ import CorporateRoute from "./components/corporate/CorporateRoute"
 import FoodRoute from "./components/food/FoodRoute"
 import BlogRoute from "./components/blog/BlogRoute"
 import useScroll from "./hooks/useScroll"
+import Footer from "./components/footer/Footer"
 
 function App() {
   const scrollYPercentage = useScroll()
@@ -39,6 +40,7 @@ function App() {
             <HomeRoute />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   )
