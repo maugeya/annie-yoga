@@ -5,7 +5,9 @@
   --primary-dark: #282828;
   --secondary-dark: #59646b;
   --primary-light: #e7e6e6;
+  --dark-green: #6f868c;
   --green: #89aaa9;
+  --light-green: #a9cec2;
   --orange: #fdb768;
   --animate-border-line: drawBorder 2s ease forwards;
 }
