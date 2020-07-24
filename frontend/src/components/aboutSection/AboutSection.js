@@ -1,15 +1,15 @@
 import React from "react"
 
-import styles from "./AboutSection.module.css"
 import Layout from "../layout/Layout"
 import SectionHeader from "../common/sectionHeader/SectionHeader"
+import SectionText from "../common/sectionText/SectionText"
 
 export default function AboutSection() {
   return (
     <Layout>
       <section id="#about" className="sectionContainer">
         <SectionHeader title="About me" />
-        <div className={styles.sectionText}>
+        <SectionText>
           <p>
             I believe that nearly everyone would be a bit better off with some
             yoga in their lives in whatever form works for them. It doesn’t
@@ -34,7 +34,7 @@ export default function AboutSection() {
             </a>
           </p>
           <p>PEACE.</p>
-        </div>
+        </SectionText>
       </section>
     </Layout>
   )

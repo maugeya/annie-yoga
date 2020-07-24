@@ -10,8 +10,3 @@
 .mainImage {
   background-image: url("../../assets/annie-corporate.jpg");
 }
-
-.sectionText {
-  text-align: justify;
-  flex: 2;
-}

@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../layout/Layout"
 import styles from "./CorporateRoute.module.css"
 import SectionHeader from "../common/sectionHeader/SectionHeader"
+import SectionText from "../common/sectionText/SectionText"
 
 export default function CorporateRoute() {
   return (
@@ -17,7 +18,7 @@ export default function CorporateRoute() {
       <Layout>
         <section className="sectionContainer">
           <SectionHeader title="Yoga classes at work" />
-          <div className={styles.sectionText}>
+          <SectionText>
             <p>
               Bringing yoga to the workplace is my goal as a yoga teacher. Since
               the beginning of my teaching career I have offered classes to
@@ -58,7 +59,7 @@ export default function CorporateRoute() {
                 anniemayrice@gmail.com
               </a>
             </p>
-          </div>
+          </SectionText>
         </section>
       </Layout>
     </div>

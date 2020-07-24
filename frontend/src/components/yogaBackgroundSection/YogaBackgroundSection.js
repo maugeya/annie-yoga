@@ -1,15 +1,15 @@
 import React from "react"
 
 import Layout from "../layout/Layout"
-import styles from "../aboutSection/AboutSection.module.css"
 import SectionHeader from "../common/sectionHeader/SectionHeader"
+import SectionText from "../common/sectionText/SectionText"
 
 export default function YogaBackground() {
   return (
     <Layout>
       <section id="#background" className="sectionContainer">
         <SectionHeader title="My Background" />
-        <div className={styles.sectionText}>
+        <SectionText>
           <p>
             A love of running and being active drew me to yoga. I used the
             physical practice of yoga to bring my body back to life after hard
@@ -24,7 +24,7 @@ export default function YogaBackground() {
             benefit from. It is my mission to try to bring yoga to more people
             and to help people heal and free themselves with this practice.
           </p>
-        </div>
+        </SectionText>
       </section>
     </Layout>
   )
