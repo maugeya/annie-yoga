@@ -28,6 +28,14 @@
   text-decoration: none;
 }
 
+.jumboImage {
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
 .jumboContainer {
   height: 100vh;
   width: 100%;
@@ -55,5 +63,5 @@
 }
 
 .sectionContainer > div {
-  margin: 5px;
+  margin: 15px;
 }
