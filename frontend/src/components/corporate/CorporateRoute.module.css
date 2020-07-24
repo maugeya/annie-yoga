@@ -1,12 +1,3 @@
-.classTypeList {
-  color: var(--green);
-}
-
-.inlineHeader {
-  color: var(--plum);
-  margin: 15px 0;
-}
-
 .mainImage {
   background-image: url("../../assets/annie-corporate.jpg");
 }

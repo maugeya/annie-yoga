@@ -23,6 +23,11 @@
   color: var(--primary-dark);
 }
 
+.inlineHeader {
+  color: var(--plum);
+  margin: 15px 0;
+}
+
 .inlineLink {
   color: var(--green);
   text-decoration: none;
