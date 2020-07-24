@@ -8,7 +8,11 @@ export default function AboutSection() {
     <Layout>
       <section id="#about" className="sectionContainer">
         <div className={styles.sectionTitle}>
-          <h1 className="darkTitle leftPartialUnderline">ABOUT ME</h1>
+          <h1
+            className={`darkTitle leftPartialUnderline ${styles.sectionTitleHeader}`}
+          >
+            ABOUT ME
+          </h1>
         </div>
         <div className={styles.sectionText}>
           <p>

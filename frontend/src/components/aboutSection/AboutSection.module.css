@@ -1,8 +1,14 @@
 .sectionTitle {
+  position: relative;
   flex: 1;
 }
 
 .sectionText {
   flex: 2;
-  text-align: left;
+  text-align: justify;
+}
+
+.sectionTitleHeader {
+  position: absolute;
+  top: 20%;
 }
