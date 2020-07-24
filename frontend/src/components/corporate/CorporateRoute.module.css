@@ -8,16 +8,7 @@
 }
 
 .mainImage {
-  background-size: cover;
   background-image: url("../../assets/annie-corporate.jpg");
-  background-position: center center;
-  height: 100%;
-  position: relative;
-  width: 100%;
-}
-
-.sectionContent {
-  display: flex;
 }
 
 .sectionText {

@@ -7,7 +7,7 @@ export default function CorporateRoute() {
   return (
     <div className={styles.container}>
       <div className="jumboContainer">
-        <div className={styles.mainImage} />
+        <div className={`jumboImage ${styles.mainImage}`} />
         <div className="centerTextOverlay">
           <h1 className="animatedUnderline">Corporate Yoga</h1>
           <h2>Get Involved</h2>
