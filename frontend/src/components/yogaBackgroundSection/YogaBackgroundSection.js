@@ -8,9 +8,13 @@ export default function YogaBackground() {
     <Layout>
       <section id="#background" className="sectionContainer">
         <div className={styles.sectionTitle}>
-          <h1 className="darkTitle leftPartialUnderline">MY BACKGROUND</h1>
+          <h1
+            className={`darkTitle leftPartialUnderline ${styles.sectionTitleHeader}`}
+          >
+            MY BACKGROUND
+          </h1>
         </div>
-        <div className={styles.sectionContent}>
+        <div className={styles.sectionText}>
           <p>
             A love of running and being active drew me to yoga. I used the
             physical practice of yoga to bring my body back to life after hard
