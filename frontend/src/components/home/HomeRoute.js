@@ -11,7 +11,7 @@ export default function HomeRoute() {
   return (
     <div className={styles.container}>
       <div className="jumboContainer">
-        <div className={styles.mainImage} />
+        <div className={`jumboImage ${styles.mainImage}`} />
         <div className="rightTextOverlay">
           <h1 className="animatedUnderline">Annie May Rice</h1>
           <h2>Yoga</h2>
