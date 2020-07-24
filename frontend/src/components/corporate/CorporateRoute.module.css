@@ -1,3 +1,12 @@
+.classTypeList {
+  color: var(--green);
+}
+
+.inlineHeader {
+  color: var(--plum);
+  margin: 15px 0;
+}
+
 .mainImage {
   background-size: cover;
   background-image: url("../../assets/annie-corporate.jpg");
@@ -5,4 +14,25 @@
   height: 100%;
   position: relative;
   width: 100%;
+}
+
+.sectionContent {
+  display: flex;
+}
+
+.sectionText {
+  text-align: justify;
+  flex: 2;
+}
+
+.sectionTitleHeader {
+  position: absolute;
+  top: 20%;
+}
+
+.sectionTitle {
+  flex: 1;
+  margin-right: var(--section-title-text-padding-right);
+  position: relative;
+  text-transform: uppercase;
 }
