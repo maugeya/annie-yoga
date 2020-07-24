@@ -2,6 +2,7 @@ import React from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import "./App.css"
+import "./components/common/style.css"
 import NavBar from "./components/navigation/NavBar"
 import HomeRoute from "./components/home/HomeRoute"
 import ClassesRoute from "./components/classes/ClassesRoute"
