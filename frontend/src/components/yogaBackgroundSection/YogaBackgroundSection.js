@@ -6,11 +6,9 @@ import styles from "../aboutSection/AboutSection.module.css"
 export default function YogaBackground() {
   return (
     <Layout>
-      <section id="#background" className={styles.container}>
+      <section id="#background" className="sectionContainer">
         <div className={styles.sectionTitle}>
-          <h1 className={`darkTitle ${styles.leftPartialUnderline}`}>
-            MY BACKGROUND
-          </h1>
+          <h1 className="darkTitle leftPartialUnderline">MY BACKGROUND</h1>
         </div>
         <div className={styles.sectionContent}>
           <p>

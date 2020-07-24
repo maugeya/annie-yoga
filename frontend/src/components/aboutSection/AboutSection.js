@@ -6,13 +6,11 @@ import Layout from "../layout/Layout"
 export default function AboutSection() {
   return (
     <Layout>
-      <section id="#about" className={styles.container}>
+      <section id="#about" className="sectionContainer">
         <div className={styles.sectionTitle}>
-          <h1 className={`darkTitle ${styles.leftPartialUnderline}`}>
-            ABOUT ME
-          </h1>
+          <h1 className="darkTitle leftPartialUnderline">ABOUT ME</h1>
         </div>
-        <div className={styles.sectionContent}>
+        <div className={styles.sectionText}>
           <p>
             I believe that nearly everyone would be a bit better off with some
             yoga in their lives in whatever form works for them. It doesn’t
@@ -32,8 +30,6 @@ export default function AboutSection() {
             <a
               className="inlineLink"
               href="mailto:anniemayrice@gmail.com?subject=Message from website"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               anniemayrice@gmail.com
             </a>

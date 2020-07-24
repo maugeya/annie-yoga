@@ -1,28 +1,8 @@
-.container {
-  display: flex;
-  height: 50vh;
-}
-
-.container > div {
-  margin: 5px;
-}
-
 .sectionTitle {
   flex: 1;
 }
 
-.sectionContent {
+.sectionText {
   flex: 2;
   text-align: left;
-}
-
-.leftPartialUnderline {
-  text-align: left;
-}
-
-.leftPartialUnderline:after {
-  border-bottom: 2px solid var(--orange);
-  content: "";
-  display: block;
-  width: 30%;
 }
