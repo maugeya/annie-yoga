@@ -15,15 +15,3 @@
   text-align: justify;
   flex: 2;
 }
-
-.sectionTitleHeader {
-  position: absolute;
-  top: 20%;
-}
-
-.sectionTitle {
-  flex: 1;
-  margin-right: var(--section-title-text-padding-right);
-  position: relative;
-  text-transform: uppercase;
-}

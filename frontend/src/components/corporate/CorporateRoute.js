@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../layout/Layout"
 import styles from "./CorporateRoute.module.css"
+import SectionHeader from "../common/sectionHeader/SectionHeader"
 
 export default function CorporateRoute() {
   return (
@@ -15,13 +16,7 @@ export default function CorporateRoute() {
       </div>
       <Layout>
         <section className="sectionContainer">
-          <div className={styles.sectionTitle}>
-            <h1
-              className={`darkTitle leftPartialUnderline ${styles.sectionTitleHeader}`}
-            >
-              Yoga classes at work
-            </h1>
-          </div>
+          <SectionHeader title="Yoga classes at work" />
           <div className={styles.sectionText}>
             <p>
               Bringing yoga to the workplace is my goal as a yoga teacher. Since

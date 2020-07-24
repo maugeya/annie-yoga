@@ -2,18 +2,13 @@ import React from "react"
 
 import Layout from "../layout/Layout"
 import styles from "../aboutSection/AboutSection.module.css"
+import SectionHeader from "../common/sectionHeader/SectionHeader"
 
 export default function YogaBackground() {
   return (
     <Layout>
       <section id="#background" className="sectionContainer">
-        <div className={styles.sectionTitle}>
-          <h1
-            className={`darkTitle leftPartialUnderline ${styles.sectionTitleHeader}`}
-          >
-            MY BACKGROUND
-          </h1>
-        </div>
+        <SectionHeader title="My Background" />
         <div className={styles.sectionText}>
           <p>
             A love of running and being active drew me to yoga. I used the

@@ -2,18 +2,13 @@ import React from "react"
 
 import styles from "./AboutSection.module.css"
 import Layout from "../layout/Layout"
+import SectionHeader from "../common/sectionHeader/SectionHeader"
 
 export default function AboutSection() {
   return (
     <Layout>
       <section id="#about" className="sectionContainer">
-        <div className={styles.sectionTitle}>
-          <h1
-            className={`darkTitle leftPartialUnderline ${styles.sectionTitleHeader}`}
-          >
-            ABOUT ME
-          </h1>
-        </div>
+        <SectionHeader title="About me" />
         <div className={styles.sectionText}>
           <p>
             I believe that nearly everyone would be a bit better off with some
