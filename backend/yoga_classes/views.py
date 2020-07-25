@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import generics
+from .models import YogaClass
+from .serializers import YogaClassSerializer
 
-# Create your views here.
+
+class ListYogaClassesView(generics.ListAPIView):
+    queryset = YogaClass.objects.all()
+    serializer_class = YogaClassSerializer
