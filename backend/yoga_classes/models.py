@@ -28,4 +28,4 @@ class YogaClass(models.Model):
     time = models.TimeField(help_text='Enter in format HH:MM')
 
     def __str__(self):
-        return '%s, %s, %s' % (self.where, self.day_of_week, self.time)
+        return '{}, {}, {}'.format(self.where, self.day_of_week, self.time)
