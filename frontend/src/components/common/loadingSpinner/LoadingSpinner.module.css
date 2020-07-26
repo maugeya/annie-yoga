@@ -1,0 +1,59 @@
+.spinnerContainer {
+  height: 100vh;
+  position: relative;
+}
+
+.spinner {
+  animation: spin 1s infinite linear;
+  -webkit-animation: spin 1s infinite linear;
+  -moz-animation: spin 1s infinite linear;
+  -o-animation: spin 1s infinite linear;
+  border-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-style: solid;
+  border-top-color: #fdb768;
+  border-width: 4px 0px 0px 0px;
+  height: 150px;
+  left: 50%;
+  position: relative;
+  top: 25%;
+  width: 150px;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spin {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
