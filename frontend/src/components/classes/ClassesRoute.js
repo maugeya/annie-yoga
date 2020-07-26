@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react"
 
-import Layout from "../layout/Layout"
+import styles from "./ClassesRoute.module.css"
 import LoadingSpinner from "../common/loadingSpinner/LoadingSpinner"
+import ClassesSection from "../classesSection/ClassesSection"
 
 export default function ClassesRoute() {
   const [yogaClasses, setYogaClasses] = useState([])
@@ -26,14 +27,16 @@ export default function ClassesRoute() {
   }, [])
 
   return (
-    <Layout>
+    <div classesName={styles.container}>
+      <div className="jumboContainer">
+        <div className={`jumboImage ${styles.mainImage}`} />
+        <div className="rightTextOverlay">
+          <h1 className="animatedUnderline">Yoga</h1>
+          <h2>Come yoga with me</h2>
+        </div>
+      </div>
       {isLoading && <LoadingSpinner />}
-      <div>{isLoading.toString()}</div>
-      {yogaClasses.map((yogaClass, i) => (
-        <p key={i}>
-          {yogaClass.where},{yogaClass.day_of_week}, {yogaClass.time}
-        </p>
-      ))}
-    </Layout>
+      <ClassesSection yogaClasses={yogaClasses} />
+    </div>
   )
 }
