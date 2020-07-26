@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 
 import Layout from "../layout/Layout"
+import LoadingSpinner from "../common/loadingSpinner/LoadingSpinner"
 
 export default function ClassesRoute() {
   const [yogaClasses, setYogaClasses] = useState([])
@@ -16,14 +17,23 @@ export default function ClassesRoute() {
           setYogaClasses(res)
           setIsLoading(false)
         })
-        .catch((err) => setError(err))
+        .catch((err) => {
+          setIsLoading(false)
+          setError(err)
+        })
     }
-
     fetchData()
   }, [])
+
   return (
     <Layout>
-      <div>CLASSESROUTE</div>
+      {isLoading && <LoadingSpinner />}
+      <div>{isLoading.toString()}</div>
+      {yogaClasses.map((yogaClass, i) => (
+        <p key={i}>
+          {yogaClass.where},{yogaClass.day_of_week}, {yogaClass.time}
+        </p>
+      ))}
     </Layout>
   )
 }
