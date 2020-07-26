@@ -27,7 +27,7 @@ export default function ClassesRoute() {
   }, [])
 
   return (
-    <div classesName={styles.container}>
+    <div className={styles.container}>
       <div className="jumboContainer">
         <div className={`jumboImage ${styles.mainImage}`} />
         <div className="rightTextOverlay">
