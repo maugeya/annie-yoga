@@ -44,6 +44,11 @@ h2 {
   font-size: 45px;
 }
 
+h3 {
+  color: var(--plum);
+  font-size: 26px;
+}
+
 @keyframes drawBorder {
   from {
     transform: scaleX(0);
