@@ -37,7 +37,7 @@ export default function ClassesSection({ yogaClasses }) {
 
           {weekdaysWithClasses.map((day, i) => (
             <div key={i}>
-              <h2 className={styles.dayHeader}>{day}</h2>
+              <h3 className={styles.dayHeader}>{day}</h3>
               {renderYogaClasses(yogaClasses, day)}
             </div>
           ))}
