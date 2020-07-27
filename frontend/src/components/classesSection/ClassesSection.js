@@ -34,13 +34,14 @@ export default function ClassesSection({ yogaClasses }) {
               beneficial and to gain strength, confidence and space in doing so.
             </p>
           </div>
-
-          {weekdaysWithClasses.map((day, i) => (
-            <div key={i}>
-              <h3 className={styles.dayHeader}>{day}</h3>
-              {renderYogaClasses(yogaClasses, day)}
-            </div>
-          ))}
+          <ul>
+            {weekdaysWithClasses.map((day, i) => (
+              <li key={i}>
+                <h3 className={styles.dayHeader}>{day}</h3>
+                {renderYogaClasses(yogaClasses, day)}
+              </li>
+            ))}
+          </ul>
         </SectionText>
       </section>
     </Layout>
