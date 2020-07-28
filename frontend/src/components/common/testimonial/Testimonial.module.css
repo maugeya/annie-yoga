@@ -1,0 +1,14 @@
+.container {
+  margin: 10px 20px;
+  background-color: var(--background-blue);
+  border-left: 3px solid var(--orange);
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.container > p {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 24px;
+  margin: 0;
+}
