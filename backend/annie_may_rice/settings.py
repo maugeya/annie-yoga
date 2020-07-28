@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'yoga_classes',
+    'retreat'
 ]
 
 MIDDLEWARE = [
