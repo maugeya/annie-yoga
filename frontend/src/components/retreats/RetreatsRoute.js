@@ -2,6 +2,7 @@ import React from "react"
 
 import styles from "./RetreatsRoute.module.css"
 import JumboImageContainer from "../common/jumboImageContainer/JumboImageContainer"
+import RetreatsSection from "../retreatsSection/RetreatsSection"
 
 export default function RetreatsRoute() {
   return (
@@ -13,6 +14,7 @@ export default function RetreatsRoute() {
       >
         <div className={`jumboImage ${styles.mainImage}`} />
       </JumboImageContainer>
+      <RetreatsSection />
     </div>
   )
 }
