@@ -1,0 +1,11 @@
+.jumboContainer {
+  height: 100vh;
+  width: 100%;
+}
+
+.rightTextOverlay {
+  color: var(--primary-light);
+  left: 65%;
+  position: absolute;
+  top: 60%;
+}
