@@ -12,4 +12,5 @@ class RetreatLocation(models.Model):
 class Retreat(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
-    retreat_location = models.ForeignKey(RetreatLocation, on_delete=CASCADE)
+    retreat_location = models.ForeignKey(
+        RetreatLocation, on_delete=models.CASCADE)
