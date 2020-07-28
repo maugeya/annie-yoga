@@ -6,17 +6,14 @@ import annieWarrior from "../../assets/annie-warrior-crop.png"
 import YogaBackgroundSection from "../yogaBackgroundSection/YogaBackgroundSection"
 import ParallaxImage from "../common/parallaxImage/ParallaxImage"
 import SubscribeSection from "../subscribeSection/SubscribeSection"
+import JumboImageContainer from "../common/jumboImageContainer/JumboImageContainer"
 
 export default function HomeRoute() {
   return (
     <div className={styles.container}>
-      <div className="jumboContainer">
+      <JumboImageContainer headerTitle="Annie May Rice" headerSubTitle="Yoga">
         <div className={`jumboImage ${styles.mainImage}`} />
-        <div className="rightTextOverlay">
-          <h1 className="animatedUnderline">Annie May Rice</h1>
-          <h2>Yoga</h2>
-        </div>
-      </div>
+      </JumboImageContainer>
       <AboutSection />
       <ParallaxImage image={annieWarrior} />
       <YogaBackgroundSection />
