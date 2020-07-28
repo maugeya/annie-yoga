@@ -1,6 +1,6 @@
 .animatedUnderline:after {
   animation: var(--animate-border-line);
-  border-bottom: 2px solid var(--orange);
+  border-bottom: 3px solid var(--orange);
   content: "";
   display: block;
   margin-left: 25%;
@@ -50,7 +50,7 @@
 }
 
 .leftPartialUnderline:after {
-  border-bottom: 2px solid var(--orange);
+  border-bottom: 3px solid var(--orange);
   content: "";
   display: block;
   width: 30%;
