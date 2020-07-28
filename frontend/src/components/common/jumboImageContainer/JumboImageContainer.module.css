@@ -3,9 +3,18 @@
   width: 100%;
 }
 
+.centerTextOverlay,
 .rightTextOverlay {
   color: var(--primary-light);
-  left: 65%;
   position: absolute;
+}
+
+.centerTextOverlay {
+  top: 75%;
+  width: 100%;
+}
+
+.rightTextOverlay {
+  left: 65%;
   top: 60%;
 }

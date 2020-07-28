@@ -32,6 +32,7 @@ export default function ClassesRoute() {
       <JumboImageContainer
         headerTitle="Yoga"
         headerSubTitle="Come yoga with me"
+        centerTextOverlay
       >
         <div className={`jumboImage ${styles.mainImage}`} />
       </JumboImageContainer>

@@ -10,6 +10,7 @@ export default function CorporateRoute() {
       <JumboImageContainer
         headerTitle="Corporate Yoga"
         headerSubTitle="Get Involved"
+        centerTextOverlay
       >
         <div className={`jumboImage ${styles.mainImage}`} />
       </JumboImageContainer>
