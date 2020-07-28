@@ -13,4 +13,4 @@ def create_random_date():
 
 
 def add_week_to_date(start_date):
-    return start_date + datetime.timedelta(days=10)
+    return start_date + datetime.timedelta(days=7)
