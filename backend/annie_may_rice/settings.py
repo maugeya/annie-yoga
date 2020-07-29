@@ -7,7 +7,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET', '')
 APP_ENV = os.environ.get('APP_ENV', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (APP_ENV == 'DEV')
 
 CORS_ORIGIN_ALLOW_ALL = True
 
