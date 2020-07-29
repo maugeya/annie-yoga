@@ -8,6 +8,9 @@ class RetreatLocation(models.Model):
     url = models.URLField()
     is_active = models.BooleanField(default=True)
 
+    def __str__(self):
+        return "{name}, {place}, {country}".format(name=self.name, place=self.place, country=self.country)
+
 
 class Retreat(models.Model):
     start_date = models.DateField()
