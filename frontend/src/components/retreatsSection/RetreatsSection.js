@@ -4,7 +4,7 @@ import Layout from "../layout/Layout"
 import SectionHeader from "../common/sectionHeader/SectionHeader"
 import SectionText from "../common/sectionText/SectionText"
 
-export default function RetreatsSection() {
+export default function RetreatsSection({ retreats }) {
   return (
     <Layout>
       <section className="sectionContainer">
