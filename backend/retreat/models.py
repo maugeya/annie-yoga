@@ -18,3 +18,11 @@ class Retreat(models.Model):
     retreat_location = models.ForeignKey(
         RetreatLocation, on_delete=models.CASCADE)
     is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return "{retreat_location_name} , {start_date} - {end_date}"\
+            .format(
+                retreat_location_name=self.retreat_location.name,
+                start_date=self.start_date,
+                end_date=self.end_date
+            )
