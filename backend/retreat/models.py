@@ -14,3 +14,4 @@ class Retreat(models.Model):
     end_date = models.DateField()
     retreat_location = models.ForeignKey(
         RetreatLocation, on_delete=models.CASCADE)
+    is_active = models.BooleanField(default=True)
