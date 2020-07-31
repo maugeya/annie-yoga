@@ -9,3 +9,6 @@ class FileOnS3(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=100)
     file = models.FileField()
+
+    def __str__(self):
+        return self.title
