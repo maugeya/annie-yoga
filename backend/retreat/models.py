@@ -1,4 +1,5 @@
 from django.db import models
+from file.models import FileOnS3
 
 
 class RetreatLocation(models.Model):
@@ -6,6 +7,7 @@ class RetreatLocation(models.Model):
     place = models.CharField(max_length=200)
     country = models.CharField(max_length=100, blank=True)
     url = models.URLField()
+    image = models.ForeignKey(FileOnS3, on_delete=models.CASCADE, null=True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
