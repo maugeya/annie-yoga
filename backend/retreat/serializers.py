@@ -5,9 +5,14 @@ from utils.time import start_month_and_end_month_are_equal, start_year_and_end_y
 
 
 class RetreatLocationSerializer(serializers.ModelSerializer):
+    s3_url = serializers.SerializerMethodField()
+
     class Meta:
         model = RetreatLocation
-        fields = '__all__'
+        fields = ('s3_url', 'country', 'name', 'place', 'url')
+
+    def get_s3_url(self, obj):
+        return "https://annie-may-rice-yoga.s3-eu-west-1.amazonaws.com/" + obj.image.file.name
 
 
 class RetreatSerializer(serializers.ModelSerializer):
