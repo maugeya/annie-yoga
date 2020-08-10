@@ -112,6 +112,12 @@ AWS_QUERYSTRING_AUTH = False
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
+DOMAIN = os.environ.get('DOMAIN', '')
+# PUBLIC_DOMAIN = 'www.anniemayrice.com'
+USE_HTTPS = (APP_ENV != 'DEV')
+PROTOCOL = 'https' if USE_HTTPS else 'http'
+BASE_URL = '{protocol}://{domain}'.format(protocol=PROTOCOL, domain=DOMAIN)
+
 LANGUAGE_CODE = 'en-GB'
 
 TIME_ZONE = 'Europe/London'
