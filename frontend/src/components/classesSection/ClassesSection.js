@@ -13,7 +13,7 @@ export default function ClassesSection({ yogaClasses }) {
     )
 
     return classesByDay.map((yogaClass, i) => (
-      <p key={i}>{`${yogaClass.where}, ${yogaClass.time}`}</p>
+      <p key={i}>{`${yogaClass.time}, ${yogaClass.where}`}</p>
     ))
   }
 
