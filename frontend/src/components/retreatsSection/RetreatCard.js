@@ -16,15 +16,26 @@ export default function RetreatCard({ retreat_dates, retreat_location }) {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.cardImageContainer}>
-        <img className={styles.cardImage} src={retreat_location.s3_url} />
-        <div className={styles.imageTextOverlay}>{retreat_location.name}</div>
+        <a className={styles.retreatLocationLink} href="https://google.com">
+          <img className={styles.cardImage} src={retreat_location.s3_url} />
+          <div className={styles.imageTextOverlay}>
+            <h3 className={styles.retreatName}>{retreat_location.name}</h3>
+          </div>
+        </a>
       </div>
       <div className={styles.cardContentContainer}>
-        <ul>{renderRetreatDetails(retreat_dates)}</ul>
+        <ul className={styles.retreatDatesList}>
+          {renderRetreatDetails(retreat_dates)}
+        </ul>
 
-        <div>
-          <a className="inlineLink" href={retreat_location.url}>
-            <p>
+        <div className={styles.retreatLinkContainer}>
+          <a
+            className="inlineLink"
+            href={retreat_location.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p className={styles.retreatLinkText}>
               {retreat_location.place}, {retreat_location.country}
             </p>
           </a>
