@@ -3,8 +3,10 @@
   border-bottom: 3px solid var(--orange);
   content: "";
   display: block;
-  margin-left: 25%;
-  width: 50%;
+}
+
+.headerTitle {
+  display: inline-block;
 }
 
 .rightTextOverlay {

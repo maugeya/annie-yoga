@@ -16,7 +16,7 @@ export default function JumboImageContainer({
           centerTextOverlay ? styles.centerTextOverlay : styles.rightTextOverlay
         }
       >
-        <h1 className="animatedUnderline">{headerTitle}</h1>
+        <h1 className="animatedUnderline headerTitle">{headerTitle}</h1>
         <h2>{headerSubTitle}</h2>
       </div>
     </div>
