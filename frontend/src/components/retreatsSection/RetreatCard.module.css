@@ -14,14 +14,29 @@
 }
 
 .cardImage {
+  -webkit-filter: brightness(100%);
+  min-height: 300px;
   width: 100%;
 }
 
+.cardImage:hover {
+  -webkit-filter: brightness(70%);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .imageTextOverlay {
-  color: var(--primary-light);
   position: absolute;
-  top: 85%;
-  left: 5%;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+
+.retreatName {
+  color: var(--primary-light);
 }
 
 .cardTableContainer {
@@ -31,6 +46,8 @@
 }
 
 .cardContentContainer {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   padding: 14px;
 }
@@ -38,4 +55,15 @@
 .retreatLinkContainer {
   border-top: 2px solid var(--light-grey);
   padding-top: 5px;
+}
+
+.retreatLinkText {
+  margin: 0;
+}
+
+.retreatDatesList {
+  flex: 2;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
