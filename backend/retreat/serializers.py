@@ -9,7 +9,7 @@ class RetreatLocationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = RetreatLocation
-        fields = ('s3_url', 'country', 'name', 'place', 'url')
+        fields = ('s3_url', 'country', 'name', 'place', 'url', 'id')
 
     def get_s3_url(self, obj):
         return "https://annie-may-rice-yoga.s3-eu-west-1.amazonaws.com/" + obj.image.file.name
