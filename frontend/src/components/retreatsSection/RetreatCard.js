@@ -21,7 +21,11 @@ export default function RetreatCard({ retreat_dates, retreat_location }) {
           className={styles.retreatLocationLink}
           to={`/retreats/${retreat_location.id}`}
         >
-          <img className={styles.cardImage} src={retreat_location.s3_url} />
+          <img
+            className={styles.cardImage}
+            src={retreat_location.s3_url}
+            alt={retreat_location.name}
+          />
           <div className={styles.imageTextOverlay}>
             <h3 className={styles.retreatName}>{retreat_location.name}</h3>
           </div>
