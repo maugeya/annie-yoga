@@ -10,11 +10,23 @@ import RetreatsRoute from "./components/retreats/RetreatsRoute"
 import CorporateRoute from "./components/corporate/CorporateRoute"
 import FoodRoute from "./components/food/FoodRoute"
 import BlogRoute from "./components/blog/BlogRoute"
+import RetreatLocationDetailRoute from "./components/retreatDetails/RetreatLocationDetailRoute"
 import useScroll from "./hooks/useScroll"
+import useFetch from "./hooks/useFetch"
 import Footer from "./components/footer/Footer"
+import {
+  getUniqueRetreatLocations,
+  getFilteredRetreatsByLocation,
+} from "./utils/retreats"
 
 function App() {
   const scrollYPercentage = useScroll()
+  const res = useFetch("http://localhost:8000/retreats/", {})
+  if (res.error.length) console.log("ERROR WIP", res.error)
+
+  const retreats = res.data
+  const isLoading = res.isLoading
+  const uniqueRetreatLocations = getUniqueRetreatLocations(retreats)
 
   return (
     <Router>
@@ -33,10 +45,19 @@ function App() {
           <Route path="/food">
             <FoodRoute />
           </Route>
-          <Route path="/retreats">
-            <RetreatsRoute />
+          <Route exact path="/retreats">
+            <RetreatsRoute retreats={retreats} isLoading={isLoading} />
           </Route>
-
+          {uniqueRetreatLocations.map((retreatLocation) => (
+            <Route path={`/retreats/${retreatLocation.id}`}>
+              <RetreatLocationDetailRoute
+                retreatDetails={getFilteredRetreatsByLocation(
+                  retreats,
+                  retreatLocation.id
+                )}
+              />
+            </Route>
+          ))}
           <Route path="/">
             <HomeRoute />
           </Route>

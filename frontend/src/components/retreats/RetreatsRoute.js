@@ -6,12 +6,7 @@ import RetreatsSection from "../retreatsSection/RetreatsSection"
 import LoadingSpinner from "../common/loadingSpinner/LoadingSpinner"
 import useFetch from "../../hooks/useFetch"
 
-export default function RetreatsRoute() {
-  const res = useFetch("http://localhost:8000/retreats/", {})
-  if (res.error.length) console.log("ERROR WIP", res.error)
-
-  const retreats = res.data
-  const isLoading = res.isLoading
+export default function RetreatsRoute({ retreats, isLoading }) {
   return (
     <div className={styles.container}>
       <JumboImageContainer

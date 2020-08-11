@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 import styles from "./RetreatCard.module.css"
 
@@ -16,12 +17,15 @@ export default function RetreatCard({ retreat_dates, retreat_location }) {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.cardImageContainer}>
-        <a className={styles.retreatLocationLink} href="https://google.com">
+        <Link
+          className={styles.retreatLocationLink}
+          to={`/retreats/${retreat_location.id}`}
+        >
           <img className={styles.cardImage} src={retreat_location.s3_url} />
           <div className={styles.imageTextOverlay}>
             <h3 className={styles.retreatName}>{retreat_location.name}</h3>
           </div>
-        </a>
+        </Link>
       </div>
       <div className={styles.cardContentContainer}>
         <ul className={styles.retreatDatesList}>
