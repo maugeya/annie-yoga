@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { camelizeKeys } from "humps"
 
 const useFetch = (url, options) => {
   const [data, setData] = useState([])
@@ -10,7 +11,7 @@ const useFetch = (url, options) => {
     const fetchData = async () => {
       try {
         const res = await fetch(url, options)
-        const json = await res.json()
+        const json = camelizeKeys(await res.json())
         setData(json)
         setIsLoading(false)
       } catch (err) {

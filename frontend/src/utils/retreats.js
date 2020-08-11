@@ -1,6 +1,6 @@
 const getFilteredRetreatsByLocation = (retreats, requiredLocationId) => {
   return retreats.filter(
-    (retreat) => retreat.retreat_location.id === requiredLocationId
+    (retreat) => retreat.retreatLocation.id === requiredLocationId
   )
 }
 
@@ -10,14 +10,14 @@ const getDatesForRetreatLocation = (retreats, requiredLocationId) => {
     requiredLocationId
   )
 
-  return filteredRetreats.map((retreat) => retreat.pretty_dates)
+  return filteredRetreats.map((retreat) => retreat.prettyDates)
 }
 
 const getUniqueRetreatLocations = (retreats) => {
-  const retreat_locations = []
-  retreats.map((retreat) => retreat_locations.push(retreat.retreat_location))
+  const retreatLocations = []
+  retreats.map((retreat) => retreatLocations.push(retreat.retreatLocation))
 
-  return [...new Map(retreat_locations.map((item) => [item.id, item])).values()]
+  return [...new Map(retreatLocations.map((item) => [item.id, item])).values()]
 }
 
 export {

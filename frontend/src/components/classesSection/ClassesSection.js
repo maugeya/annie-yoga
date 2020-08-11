@@ -9,7 +9,7 @@ import Testimonial from "../common/testimonial/Testimonial"
 export default function ClassesSection({ yogaClasses }) {
   const renderYogaClasses = (yogaClasses, day) => {
     const classesByDay = yogaClasses.filter(
-      (yogaClass) => yogaClass.day_of_week === day
+      (yogaClass) => yogaClass.dayOfWeek === day
     )
 
     return classesByDay.map((yogaClass, i) => (
@@ -18,7 +18,7 @@ export default function ClassesSection({ yogaClasses }) {
   }
 
   const weekdaysWithClasses = [
-    ...new Set(yogaClasses.map((yogaClass) => yogaClass.day_of_week)),
+    ...new Set(yogaClasses.map((yogaClass) => yogaClass.dayOfWeek)),
   ]
   return (
     <Layout>

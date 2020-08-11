@@ -18,13 +18,13 @@ export default function RetreatsSection({ retreats }) {
         <SectionHeader title="Upcoming retreats 2020" />
         <SectionText>
           <div className={styles.cardTableContainer}>
-            {uniqueRetreatLocations.map((retreat_location, i) => (
+            {uniqueRetreatLocations.map((retreatLocation, i) => (
               <RetreatCard
-                retreat_dates={getDatesForRetreatLocation(
+                retreatDates={getDatesForRetreatLocation(
                   retreats,
-                  retreat_location.id
+                  retreatLocation.id
                 )}
-                retreat_location={retreat_location}
+                retreatLocation={retreatLocation}
                 key={i}
               />
             ))}

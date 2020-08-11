@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"
 
 import styles from "./RetreatCard.module.css"
 
-export default function RetreatCard({ retreat_dates, retreat_location }) {
-  const renderRetreatDetails = (retreat_dates) => {
-    return retreat_dates.map((date, i) => {
+export default function RetreatCard({ retreatDates, retreatLocation }) {
+  const renderRetreatDetails = (retreatDates) => {
+    return retreatDates.map((date, i) => {
       return (
         <li key={i}>
           <p>{date}</p>
@@ -19,32 +19,32 @@ export default function RetreatCard({ retreat_dates, retreat_location }) {
       <div className={styles.cardImageContainer}>
         <Link
           className={styles.retreatLocationLink}
-          to={`/retreats/${retreat_location.id}`}
+          to={`/retreats/${retreatLocation.id}`}
         >
           <img
             className={styles.cardImage}
-            src={retreat_location.s3_url}
-            alt={retreat_location.name}
+            src={retreatLocation.s3Url}
+            alt={retreatLocation.name}
           />
           <div className={styles.imageTextOverlay}>
-            <h3 className={styles.retreatName}>{retreat_location.name}</h3>
+            <h3 className={styles.retreatName}>{retreatLocation.name}</h3>
           </div>
         </Link>
       </div>
       <div className={styles.cardContentContainer}>
         <ul className={styles.retreatDatesList}>
-          {renderRetreatDetails(retreat_dates)}
+          {renderRetreatDetails(retreatDates)}
         </ul>
 
         <div className={styles.retreatLinkContainer}>
           <a
             className="inlineLink"
-            href={retreat_location.url}
+            href={retreatLocation.url}
             target="_blank"
             rel="noopener noreferrer"
           >
             <p className={styles.retreatLinkText}>
-              {retreat_location.place}, {retreat_location.country}
+              {retreatLocation.place}, {retreatLocation.country}
             </p>
           </a>
         </div>
