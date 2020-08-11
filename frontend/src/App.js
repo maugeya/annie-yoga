@@ -31,7 +31,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar scrollYPercentage={scrollYPercentage} />
+        <NavBar
+          scrollYPercentage={scrollYPercentage}
+          retreatLocations={uniqueRetreatLocations}
+        />
         <Switch>
           <Route path="/blog">
             <BlogRoute />

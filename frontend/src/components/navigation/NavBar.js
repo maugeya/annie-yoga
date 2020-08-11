@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 import styles from "./NavBar.module.css"
 
-export default function NavBar({ scrollYPercentage }) {
+export default function NavBar({ scrollYPercentage, retreatLocations }) {
   const isPastScrollMin = (scrollYPercentage) => {
     return scrollYPercentage > 87.84
   }
@@ -34,12 +34,13 @@ export default function NavBar({ scrollYPercentage }) {
         <li>
           <Link to="/retreats">Retreats</Link>
           <ul className={styles.retreatMenu}>
-            <li>
-              <Link to="/retreats/tuscan-hills">Tuscan Hills</Link>
-            </li>
-            <li>
-              <Link to="/retreats/fire-and-water">About</Link>
-            </li>
+            {retreatLocations.map((retreatLocation) => (
+              <li>
+                <Link to={`/retreats/${retreatLocation.id}`}>
+                  {retreatLocation.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </li>
         <li>
