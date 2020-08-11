@@ -4,7 +4,6 @@ import styles from "./RetreatsRoute.module.css"
 import JumboImageContainer from "../common/jumboImageContainer/JumboImageContainer"
 import RetreatsSection from "../retreatsSection/RetreatsSection"
 import LoadingSpinner from "../common/loadingSpinner/LoadingSpinner"
-import useFetch from "../../hooks/useFetch"
 
 export default function RetreatsRoute({ retreats, isLoading }) {
   return (
