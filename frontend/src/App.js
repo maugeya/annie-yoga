@@ -16,7 +16,7 @@ import useFetch from "./hooks/useFetch"
 import Footer from "./components/footer/Footer"
 import {
   getUniqueRetreatLocations,
-  getFilteredRetreatsByLocation,
+  getDatesForRetreatLocation,
 } from "./utils/retreats"
 
 function App() {
@@ -51,10 +51,11 @@ function App() {
           <Route exact path="/retreats">
             <RetreatsRoute retreats={retreats} isLoading={isLoading} />
           </Route>
-          {uniqueRetreatLocations.map((retreatLocation) => (
-            <Route path={`/retreats/${retreatLocation.id}`}>
+          {uniqueRetreatLocations.map((retreatLocation, i) => (
+            <Route path={`/retreats/${retreatLocation.id}`} key={i}>
               <RetreatLocationDetailRoute
-                retreatDetails={getFilteredRetreatsByLocation(
+                retreatLocation={retreatLocation}
+                retreatDates={getDatesForRetreatLocation(
                   retreats,
                   retreatLocation.id
                 )}
