@@ -34,8 +34,8 @@ export default function NavBar({ scrollYPercentage, retreatLocations }) {
         <li>
           <Link to="/retreats">Retreats</Link>
           <ul className={styles.retreatMenu}>
-            {retreatLocations.map((retreatLocation) => (
-              <li>
+            {retreatLocations.map((retreatLocation, i) => (
+              <li key={i}>
                 <Link to={`/retreats/${retreatLocation.id}`}>
                   {retreatLocation.name}
                 </Link>
