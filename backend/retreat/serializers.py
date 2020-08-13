@@ -2,17 +2,31 @@ from rest_framework import serializers
 
 from .models import Retreat, RetreatLocation
 from utils.time import start_month_and_end_month_are_equal, start_year_and_end_year_are_equal
+from utils.common import get_s3_url
 
 
 class RetreatLocationSerializer(serializers.ModelSerializer):
-    s3_url = serializers.SerializerMethodField()
+    card_image_s3_url = serializers.SerializerMethodField()
+    retreat_main_image_s3_url = serializers.SerializerMethodField()
+    retreat_gallery_s3_urls = serializers.SerializerMethodField()
 
     class Meta:
         model = RetreatLocation
-        fields = ('s3_url', 'country', 'name', 'place', 'url', 'id')
+        fields = ('id', 'place', 'country', 'name', 'url', 'card_image_s3_url', 'description', 'subtitle', 'testimonial_1', 'testimonial_2', 'cost', 'cost_includes',
+                  'cost_excludes', 'retreat_main_image_s3_url', 'retreat_gallery_s3_urls', 'daily_schedule', 'optional_extras')
 
-    def get_s3_url(self, obj):
-        return "https://annie-may-rice-yoga.s3-eu-west-1.amazonaws.com/" + obj.image.file.name
+    def get_card_image_s3_url(self, obj):
+        file_name = obj.card_pic_image.file.name
+        return get_s3_url(file_name)
+
+    def get_retreat_main_image_s3_url(self, obj):
+        file_name = obj.retreat_main_image.file.name
+        return get_s3_url(file_name)
+
+    def get_retreat_gallery_s3_urls(self, obj):
+        image_gallery_instances = obj.retreat_image_gallery.all()
+        return [get_s3_url(image.file.name)
+                for image in image_gallery_instances]
 
 
 class RetreatSerializer(serializers.ModelSerializer):

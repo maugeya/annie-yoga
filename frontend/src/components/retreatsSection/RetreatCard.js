@@ -23,7 +23,7 @@ export default function RetreatCard({ retreatDates, retreatLocation }) {
         >
           <img
             className={styles.cardImage}
-            src={retreatLocation.s3Url}
+            src={retreatLocation.cardImageS3Url}
             alt={retreatLocation.name}
           />
           <div className={styles.imageTextOverlay}>
