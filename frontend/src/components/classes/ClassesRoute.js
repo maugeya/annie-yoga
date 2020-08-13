@@ -18,9 +18,8 @@ export default function ClassesRoute() {
         headerTitle="Yoga"
         headerSubTitle="Come yoga with me"
         centerTextOverlay
-      >
-        <div className={`jumboImage ${styles.mainImage}`} />
-      </JumboImageContainer>
+        imageS3Url="https://annie-may-rice-yoga.s3-eu-west-1.amazonaws.com/annie-classes.jpg"
+      />
       {isLoading && <LoadingSpinner />}
       <ClassesSection yogaClasses={yogaClasses} />
     </div>

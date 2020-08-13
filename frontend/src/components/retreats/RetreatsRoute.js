@@ -12,6 +12,7 @@ export default function RetreatsRoute({ retreats, isLoading }) {
         headerTitle="Retreats and Workshops"
         headerSubTitle="More yoga, retreats and workshops"
         centerTextOverlay
+        imageS3Url="https://annie-may-rice-yoga.s3-eu-west-1.amazonaws.com/annie-retreat.jpg"
       >
         <div className={`jumboImage ${styles.mainImage}`} />
       </JumboImageContainer>

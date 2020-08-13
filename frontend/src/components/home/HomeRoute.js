@@ -11,9 +11,11 @@ import JumboImageContainer from "../common/jumboImageContainer/JumboImageContain
 export default function HomeRoute() {
   return (
     <div className={styles.container}>
-      <JumboImageContainer headerTitle="Annie May Rice" headerSubTitle="Yoga">
-        <div className={`jumboImage ${styles.mainImage}`} />
-      </JumboImageContainer>
+      <JumboImageContainer
+        headerTitle="Annie May Rice"
+        headerSubTitle="Yoga"
+        imageS3Url="https://annie-may-rice-yoga.s3-eu-west-1.amazonaws.com/about-annie.png"
+      ></JumboImageContainer>
       <AboutSection />
       <ParallaxImage image={annieWarrior} />
       <YogaBackgroundSection />

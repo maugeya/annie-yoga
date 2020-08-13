@@ -11,9 +11,8 @@ export default function CorporateRoute() {
         headerTitle="Corporate Yoga"
         headerSubTitle="Get Involved"
         centerTextOverlay
-      >
-        <div className={`jumboImage ${styles.mainImage}`} />
-      </JumboImageContainer>
+        imageS3Url="https://annie-may-rice-yoga.s3-eu-west-1.amazonaws.com/annie-corporate.jpg"
+      />
       <CorporateSection />
     </div>
   )

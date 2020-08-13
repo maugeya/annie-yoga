@@ -3,14 +3,14 @@ import React from "react"
 import styles from "./JumboImageContainer.module.css"
 
 export default function JumboImageContainer({
-  children,
   headerTitle,
   headerSubTitle,
   centerTextOverlay,
+  imageS3Url,
 }) {
   return (
     <div className={styles.jumboContainer}>
-      {children}
+      <img src={imageS3Url} />
       <div
         className={
           centerTextOverlay ? styles.centerTextOverlay : styles.rightTextOverlay
