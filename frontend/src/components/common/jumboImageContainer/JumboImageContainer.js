@@ -6,11 +6,11 @@ export default function JumboImageContainer({
   headerTitle,
   headerSubTitle,
   centerTextOverlay,
-  imageS3Url,
+  imageUrl,
 }) {
   return (
     <div className={styles.jumboContainer}>
-      <img src={imageS3Url} />
+      <img src={imageUrl} />
       <div
         className={
           centerTextOverlay ? styles.centerTextOverlay : styles.rightTextOverlay

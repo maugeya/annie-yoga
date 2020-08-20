@@ -11,7 +11,7 @@ export default function CorporateRoute() {
         headerTitle="Corporate Yoga"
         headerSubTitle="Get Involved"
         centerTextOverlay
-        imageS3Url="https://annie-may-rice-yoga.s3-eu-west-1.amazonaws.com/annie-corporate.jpg"
+        imageUrl={require("../../assets/corporate-main.jpg")}
       />
       <CorporateSection />
     </div>

@@ -14,7 +14,7 @@ export default function HomeRoute() {
       <JumboImageContainer
         headerTitle="Annie May Rice"
         headerSubTitle="Yoga"
-        imageS3Url="https://annie-may-rice-yoga.s3-eu-west-1.amazonaws.com/about-annie.png"
+        imageUrl={require("../../assets/about-main.png")}
       ></JumboImageContainer>
       <AboutSection />
       <ParallaxImage image={annieWarrior} />

@@ -18,7 +18,7 @@ export default function ClassesRoute() {
         headerTitle="Yoga"
         headerSubTitle="Come yoga with me"
         centerTextOverlay
-        imageS3Url="https://annie-may-rice-yoga.s3-eu-west-1.amazonaws.com/annie-classes.jpg"
+        imageUrl={require("../../assets/classes-main.jpg")}
       />
       {isLoading && <LoadingSpinner />}
       <ClassesSection yogaClasses={yogaClasses} />
