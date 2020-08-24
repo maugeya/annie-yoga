@@ -28,14 +28,6 @@
   text-decoration: none;
 }
 
-.jumboImage {
-  background-size: cover;
-  background-position: center center;
-  height: 100%;
-  position: relative;
-  width: 100%;
-}
-
 .leftPartialUnderline {
   text-align: left;
 }
