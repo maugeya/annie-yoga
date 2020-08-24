@@ -1,0 +1,15 @@
+.retreatContent {
+  flex: 2;
+}
+
+.retreatDates {
+  margin-bottom: 20px;
+}
+
+.retreatLogisitics {
+  flex: 1;
+}
+
+.retreatDetailSectionContainer {
+  text-align: justify;
+}
