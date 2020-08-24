@@ -44,7 +44,8 @@ export default function RetreatCard({ retreatDates, retreatLocation }) {
             rel="noopener noreferrer"
           >
             <p className={styles.retreatLinkText}>
-              {retreatLocation.place}, {retreatLocation.country}
+              {retreatLocation.place}{" "}
+              {retreatLocation.country && `, ${retreatLocation.country}`}
             </p>
           </a>
         </div>
