@@ -13,9 +13,7 @@ export default function RetreatsRoute({ retreats, isLoading }) {
         headerSubTitle="More yoga, retreats and workshops"
         centerTextOverlay
         imageUrl={require("../../assets/retreat-main.jpg")}
-      >
-        <div className={`jumboImage ${styles.mainImage}`} />
-      </JumboImageContainer>
+      />
       {isLoading && <LoadingSpinner />}
       <RetreatsSection retreats={retreats} />
     </div>
