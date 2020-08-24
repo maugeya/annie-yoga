@@ -2,7 +2,8 @@ from rest_framework import serializers
 
 from .models import Retreat, RetreatLocation
 from utils.time import start_month_and_end_month_are_equal, start_year_and_end_year_are_equal
-from utils.common import get_s3_url
+from utils.common import get_s3_url, get_presigned_url
+from annie_may_rice.settings import AWS_STORAGE_BUCKET_NAME
 
 
 class RetreatLocationSerializer(serializers.ModelSerializer):
@@ -17,15 +18,15 @@ class RetreatLocationSerializer(serializers.ModelSerializer):
 
     def get_card_image_s3_url(self, obj):
         file_name = obj.card_pic_image.file.name
-        return get_s3_url(file_name)
+        return get_presigned_url(AWS_STORAGE_BUCKET_NAME, file_name)
 
     def get_retreat_main_image_s3_url(self, obj):
         file_name = obj.retreat_main_image.file.name
-        return get_s3_url(file_name)
+        return get_presigned_url(AWS_STORAGE_BUCKET_NAME, file_name)
 
     def get_retreat_gallery_s3_urls(self, obj):
         image_gallery_instances = obj.retreat_image_gallery.all()
-        return [get_s3_url(image.file.name)
+        return [get_presigned_url(AWS_STORAGE_BUCKET_NAME, image.file.name)
                 for image in image_gallery_instances]
 
 
