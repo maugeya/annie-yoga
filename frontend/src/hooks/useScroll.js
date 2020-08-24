@@ -15,6 +15,6 @@ export default function useScroll() {
     return () => {
       window.removeEventListener("scroll", logScroll)
     }
-  })
+  }, [scrollYPercentage])
   return scrollYPercentage
 }
