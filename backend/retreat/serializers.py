@@ -10,6 +10,7 @@ class RetreatLocationSerializer(serializers.ModelSerializer):
     card_image_s3_url = serializers.SerializerMethodField()
     retreat_main_image_s3_url = serializers.SerializerMethodField()
     retreat_gallery_s3_urls = serializers.SerializerMethodField()
+    description = serializers.SerializerMethodField()
 
     class Meta:
         model = RetreatLocation
@@ -28,6 +29,10 @@ class RetreatLocationSerializer(serializers.ModelSerializer):
         image_gallery_instances = obj.retreat_image_gallery.all()
         return [get_presigned_url(AWS_STORAGE_BUCKET_NAME, image.file.name)
                 for image in image_gallery_instances]
+
+    def get_description(self, obj):
+        description_list = obj.description.splitlines()
+        return [x for x in description_list if x]
 
 
 class RetreatSerializer(serializers.ModelSerializer):
