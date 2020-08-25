@@ -1,4 +1,8 @@
-.retreatContent {
+.retreatCost {
+  margin-top: 40px;
+}
+
+.retreatSectionContent {
   flex: 2;
 }
 
@@ -6,10 +10,22 @@
   margin-bottom: 20px;
 }
 
-.retreatLogisitics {
+.retreatDetailList {
+  padding: 0;
+  margin: 0;
+}
+
+.retreatDescription,
+.imageGridSection {
+  margin-bottom: 50px;
+}
+
+.retreatSectionHeader {
   flex: 1;
 }
 
 .retreatDetailSectionContainer {
+  display: flex;
+  margin-bottom: 50px;
   text-align: justify;
 }
