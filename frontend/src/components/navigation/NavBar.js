@@ -14,13 +14,13 @@ export default function NavBar({ scrollYPercentage, retreatLocations }) {
     <div className={darkNav ? styles.containerDark : styles.container}>
       {darkNav && (
         <div className={styles.logoContainer}>
-          <a href="https://google.com">
+          <Link to="/">
             <img
               className={styles.logo}
               src={require("../../assets/annie-logo.png")}
               alt="Annie May Rice logo"
             />
-          </a>
+          </Link>
         </div>
       )}
 
