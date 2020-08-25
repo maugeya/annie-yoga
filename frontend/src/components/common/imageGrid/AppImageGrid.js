@@ -7,7 +7,7 @@ export default function AppImageGrid({ imageURLs }) {
     <div className={styles.galleryContainer}>
       {imageURLs.map((imageURL, i) => (
         <div className={styles.imageContainer} key={i}>
-          <img src={imageURL} alt="retreat-picture" />
+          <img src={imageURL} alt="retreat" />
         </div>
       ))}
     </div>
