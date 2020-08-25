@@ -11,6 +11,10 @@ class RetreatLocationSerializer(serializers.ModelSerializer):
     retreat_main_image_s3_url = serializers.SerializerMethodField()
     retreat_gallery_s3_urls = serializers.SerializerMethodField()
     description = serializers.SerializerMethodField()
+    daily_schedule = serializers.SerializerMethodField()
+    cost_includes = serializers.SerializerMethodField()
+    cost_excludes = serializers.SerializerMethodField()
+    optional_extras = serializers.SerializerMethodField()
 
     class Meta:
         model = RetreatLocation
@@ -33,6 +37,22 @@ class RetreatLocationSerializer(serializers.ModelSerializer):
     def get_description(self, obj):
         description_list = obj.description.splitlines()
         return [x for x in description_list if x]
+
+    def get_daily_schedule(self, obj):
+        schedule_list = obj.daily_schedule.split(":")
+        return [x.strip() for x in schedule_list]
+
+    def get_cost_includes(self, obj):
+        cost_includes_list = obj.cost_includes.split(":")
+        return [x.strip() for x in cost_includes_list]
+
+    def get_cost_excludes(self, obj):
+        cost_excludes_list = obj.cost_excludes.split(":")
+        return [x.strip() for x in cost_excludes_list]
+
+    def get_optional_extras(self, obj):
+        optional_extras_list = obj.optional_extras.split(":")
+        return [x.strip() for x in optional_extras_list]
 
 
 class RetreatSerializer(serializers.ModelSerializer):
