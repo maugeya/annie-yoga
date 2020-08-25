@@ -18,6 +18,7 @@ export default function RetreatLocationDetailSection({
     optionalExtras,
     testimonial1,
     testimonial2,
+    url,
   } = retreatLocation
 
   return (
@@ -33,7 +34,12 @@ export default function RetreatLocationDetailSection({
           </div>
           <div>
             <h3>
-              <a className="inlineLink">
+              <a
+                className="inlineLink"
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {retreatLocation.place}{" "}
                 {retreatLocation.country && `, ${retreatLocation.country}`}
               </a>
@@ -85,20 +91,23 @@ export default function RetreatLocationDetailSection({
           </ul>
         </div>
       </section>
-      <section className={styles.retreatDetailSectionContainer}>
-        <div className={styles.retreatSectionHeader}>
-          <h3>Cost excludes</h3>
-        </div>
-        <div className={styles.retreatSectionContent}>
-          <ul className={styles.retreatDetailList}>
-            {costExcludes.map((item, i) => (
-              <li key={i}>
-                <p>{item}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      {costExcludes && (
+        <section className={styles.retreatDetailSectionContainer}>
+          <div className={styles.retreatSectionHeader}>
+            <h3>Cost excludes</h3>
+          </div>
+          <div className={styles.retreatSectionContent}>
+            <ul className={styles.retreatDetailList}>
+              {costExcludes.map((item, i) => (
+                <li key={i}>
+                  <p>{item}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
       {optionalExtras && (
         <section className={styles.retreatDetailSectionContainer}>
           <div className={styles.retreatSectionHeader}>
