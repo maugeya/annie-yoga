@@ -47,10 +47,14 @@ class RetreatLocationSerializer(serializers.ModelSerializer):
         return [x.strip() for x in cost_includes_list]
 
     def get_cost_excludes(self, obj):
+        if not obj.cost_excludes:
+            return None
         cost_excludes_list = obj.cost_excludes.split(":")
         return [x.strip() for x in cost_excludes_list]
 
     def get_optional_extras(self, obj):
+        if not obj.optional_extras:
+            return None
         optional_extras_list = obj.optional_extras.split(":")
         return [x.strip() for x in optional_extras_list]
 
