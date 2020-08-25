@@ -15,7 +15,8 @@ class RetreatLocation(models.Model):
         FileOnS3, on_delete=models.CASCADE, null=True, related_name='card_pic_image')
     is_active = models.BooleanField(default=True)
     subtitle = models.CharField(max_length=100)
-    description = models.TextField()
+    description = models.TextField(
+        help_text='Add a new line to create a new paragraph on the page')
     testimonial_1 = models.TextField()
     testimonial_2 = models.TextField()
     retreat_main_image = models.ForeignKey(
@@ -24,10 +25,13 @@ class RetreatLocation(models.Model):
         FileOnS3, related_name='image_gallery')
     cost = models.DecimalField(max_digits=5, decimal_places=2, validators=[
                                MinValueValidator(0.01)])
-    cost_includes = models.TextField()
+    cost_includes = models.TextField(
+        help_text='eg. Shared accommodation: All veggie meals: All yoga...')
     cost_excludes = models.TextField(blank=True, null=True)
-    daily_schedule = models.TextField()
-    optional_extras = models.TextField(blank=True, null=True)
+    daily_schedule = models.TextField(
+        help_text='eg. 7am - Breakfast: 8am - Yoga...')
+    optional_extras = models.TextField(
+        blank=True, null=True, help_text='eg. Sauna: Massage: Running...')
 
     def __str__(self):
         return "{name}, {place}, {country}".format(name=self.name, place=self.place, country=self.country)
