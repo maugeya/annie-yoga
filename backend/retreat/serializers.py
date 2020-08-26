@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from .models import Retreat, RetreatLocation
 from utils.time import start_month_and_end_month_are_equal, start_year_and_end_year_are_equal
-from utils.common import get_s3_url, get_presigned_url
+from utils.common import get_presigned_url
 from annie_may_rice.settings import AWS_STORAGE_BUCKET_NAME
 
 
