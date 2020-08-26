@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'yoga_classes',
     'retreat',
-    'file'
+    'file',
+    'recipe'
 ]
 
 MIDDLEWARE = [
