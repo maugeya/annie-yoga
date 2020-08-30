@@ -3,6 +3,7 @@ from rest_framework import serializers
 from .models import Recipe
 from utils.common import get_presigned_url
 from annie_may_rice.settings import AWS_STORAGE_BUCKET_NAME
+from utils.recipe import prettify_ingredients_for_serializer
 
 
 class RecipeSerializer(serializers.ModelSerializer):
@@ -32,22 +33,12 @@ class RecipeSerializer(serializers.ModelSerializer):
 
     def get_recipe_ingredients(self, obj):
         pretty_ingredients_list = []
-        all_recipe_ingredients = obj.recipe_ingredient.all()
+        all_recipe_ingredients = obj.recipe_ingredient.all(
+        ).values('amount', 'unit__name', 'ingredient__name', 'is_optional')
 
-        for recipe_ingredient in all_recipe_ingredients:
-            # Need to allow for optional ingredients as well :(
-            if recipe_ingredient.ingredient and recipe_ingredient.unit and recipe_ingredient.amount:
-                pretty_ingredient = str(recipe_ingredient.amount) + ' ' + \
-                    recipe_ingredient.unit.name + ' ' + recipe_ingredient.ingredient.name
-            elif not recipe_ingredient.amount and not recipe_ingredient.unit:
-                pretty_ingredient = recipe_ingredient.ingredient.name
-            elif recipe_ingredient.ingredient and recipe_ingredient.unit and not recipe_ingredient.amount:
-                pretty_ingredient = recipe_ingredient.ingredient.name + \
-                    ', ' + recipe_ingredient.unit.name
-            elif recipe_ingredient.ingredient and recipe_ingredient.amount and not recipe_ingredient.unit:
-                pretty_ingredient = str(recipe_ingredient.amount) + \
-                    ' ' + recipe_ingredient.ingredient.name
-
-            pretty_ingredients_list.append(pretty_ingredient)
-
-        return pretty_ingredients_list
+        formatted_ingredients_list = []
+        for ingredient in all_recipe_ingredients:
+            pretty_ingredients_dict = {'is_optional': ingredient['is_optional'],
+                                       'pretty_ingredient': prettify_ingredients_for_serializer(ingredient)}
+            formatted_ingredients_list.append(pretty_ingredients_dict)
+        return formatted_ingredients_list
