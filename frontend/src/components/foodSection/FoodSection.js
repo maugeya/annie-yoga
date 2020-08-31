@@ -1,16 +1,83 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
 import Layout from "../layout/Layout"
 import SectionHeader from "../common/sectionHeader/SectionHeader"
 import SectionText from "../common/sectionText/SectionText"
 import ParallaxImage from "../common/parallaxImage/ParallaxImage"
 import foodParallax from "../../assets/food-parallax.jpg"
+import RecipeCategorySection from "./RecipeCategorySection"
+import RecipeCategoryDropdown from "./RecipeCategoryDropdown"
 
 export default function FoodSection({ recipes }) {
+  const [filteredCategory, setFilteredCategory] = useState()
+  const [selectValue, setSelectValue] = useState("ALL")
+
   const getAllRecipeCategories = (recipes) => {
-    // console.log(recipes)
+    return recipes.map((recipe) => recipe.recipeCategory)
   }
-  getAllRecipeCategories(recipes)
+  const allCategories = getAllRecipeCategories(recipes)
+
+  const getRecipesForCategory = (categoryId, recipes) => {
+    return recipes.filter((recipe) => recipe.recipeCategory.id === categoryId)
+  }
+
+  const handleOnChangeDropdown = (e) => {
+    setFilteredCategory(
+      allCategories.find((c) => c.id.toString() === e.target.value)
+    )
+    setSelectValue(e.target.value)
+  }
+
+  const renderCategoryOptions = () => {
+    return (
+      <>
+        <option disabled value="ALL">
+          --Select a category--
+        </option>
+        {allCategories.map((category, i) => {
+          return (
+            <option key={i} value={category.id}>
+              {category.name}
+            </option>
+          )
+        })}
+      </>
+    )
+  }
+
+  const renderRecipes = () => {
+    if (!filteredCategory) {
+      return allCategories.map((category, i) => (
+        <RecipeCategorySection
+          category={category}
+          recipesForCategory={getRecipesForCategory(category.id, recipes)}
+          key={i}
+        />
+      ))
+    }
+    return (
+      <RecipeCategorySection
+        category={filteredCategory}
+        recipesForCategory={getRecipesForCategory(filteredCategory.id, recipes)}
+      />
+    )
+  }
+
+  const renderResetButton = () => {
+    if (!filteredCategory) {
+      return
+    }
+    return (
+      <button type="button" onClick={handleResetButtonClick}>
+        Reset category
+      </button>
+    )
+  }
+
+  const handleResetButtonClick = () => {
+    setFilteredCategory()
+    setSelectValue("ALL")
+  }
 
   return (
     <>
@@ -40,7 +107,11 @@ export default function FoodSection({ recipes }) {
         <section className="sectionContainer">
           <SectionHeader title="Recipes" />
           <SectionText>
-            <p>HEYO</p>
+            <select onChange={handleOnChangeDropdown} value={selectValue}>
+              {renderCategoryOptions()}
+            </select>
+            {renderResetButton()}
+            {renderRecipes()}
           </SectionText>
         </section>
       </Layout>
