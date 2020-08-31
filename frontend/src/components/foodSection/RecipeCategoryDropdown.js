@@ -2,7 +2,9 @@ import React, { useState } from "react"
 
 export default function RecipeCategoryDropdown({
   allCategories,
+  filteredCategory,
   onChange,
+  onResetClick,
   value,
 }) {
   const renderCategoryOptions = () => {
@@ -22,9 +24,23 @@ export default function RecipeCategoryDropdown({
     )
   }
 
+  const renderResetButton = () => {
+    if (!filteredCategory) {
+      return
+    }
+    return (
+      <button type="button" onClick={onResetClick}>
+        Reset category
+      </button>
+    )
+  }
+
   return (
-    <select onChange={onChange} value={value}>
-      {renderCategoryOptions()}
-    </select>
+    <div>
+      <select onChange={onChange} value={value}>
+        {renderCategoryOptions()}
+      </select>
+      {renderResetButton()}
+    </div>
   )
 }

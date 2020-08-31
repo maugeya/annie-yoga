@@ -46,17 +46,6 @@ export default function FoodSection({ recipes }) {
     )
   }
 
-  const renderResetButton = () => {
-    if (!filteredCategory) {
-      return
-    }
-    return (
-      <button type="button" onClick={handleResetButtonClick}>
-        Reset category
-      </button>
-    )
-  }
-
   const handleResetButtonClick = () => {
     setFilteredCategory()
     setSelectValue("ALL")
@@ -92,10 +81,11 @@ export default function FoodSection({ recipes }) {
           <SectionText>
             <RecipeCategoryDropdown
               allCategories={allCategories}
+              filteredCategory={filteredCategory}
               onChange={handleOnChangeDropdown}
+              onResetClick={handleResetButtonClick}
               value={selectValue}
             />
-            {renderResetButton()}
             {renderRecipes()}
           </SectionText>
         </section>
