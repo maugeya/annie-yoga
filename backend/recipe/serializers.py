@@ -28,7 +28,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         }
 
         if obj.recipe_category.description:
-            recipe_category_object['desciption'] = obj.recipe_category.description
+            recipe_category_object['description'] = obj.recipe_category.description
 
         return recipe_category_object
 
