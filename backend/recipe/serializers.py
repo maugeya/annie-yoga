@@ -10,6 +10,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     image_s3 = serializers.SerializerMethodField()
     recipe_category = serializers.SerializerMethodField()
     recipe_ingredients = serializers.SerializerMethodField()
+    method = serializers.SerializerMethodField()
 
     class Meta:
         model = Recipe
@@ -42,3 +43,6 @@ class RecipeSerializer(serializers.ModelSerializer):
                                        'pretty_ingredient': prettify_ingredients_for_serializer(ingredient)}
             formatted_ingredients_list.append(pretty_ingredients_dict)
         return formatted_ingredients_list
+
+    def get_method(self, obj):
+        return obj.method.split(": ")
