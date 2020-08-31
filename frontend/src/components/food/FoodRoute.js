@@ -1,9 +1,9 @@
 import React from "react"
 
-import Layout from "../layout/Layout"
 import JumboImageContainer from "../common/jumboImageContainer/JumboImageContainer"
 import FoodSection from "../foodSection/FoodSection"
 import useFetch from "../../hooks/useFetch"
+import LoadingSpinner from "../common/loadingSpinner/LoadingSpinner"
 
 export default function FoodRoute() {
   const res = useFetch("http://localhost:8000/recipes/", {})
@@ -11,7 +11,7 @@ export default function FoodRoute() {
 
   const recipes = res.data
   const isLoading = res.isLoading
-  console.log("recipes", recipes)
+
   return (
     <div>
       <JumboImageContainer
@@ -20,7 +20,8 @@ export default function FoodRoute() {
         centerTextOverlay
         imageUrl={require("../../assets/food-main.jpg")}
       />
-      <FoodSection />
+      {isLoading && <LoadingSpinner />}
+      <FoodSection recipes={recipes} />
     </div>
   )
 }
