@@ -1,4 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
+
+import styles from "./RecipeCategoryDropdown.module.css"
 
 export default function RecipeCategoryDropdown({
   allCategories,
@@ -29,15 +31,25 @@ export default function RecipeCategoryDropdown({
       return
     }
     return (
-      <button type="button" onClick={onResetClick}>
-        Reset category
-      </button>
+      <div className={styles.resetButtonContainer}>
+        <button
+          className={styles.resetButton}
+          type="button"
+          onClick={onResetClick}
+        >
+          Reset category
+        </button>
+      </div>
     )
   }
 
   return (
-    <div>
-      <select onChange={onChange} value={value}>
+    <div className={styles.container}>
+      <select
+        className={styles.dropDownSelect}
+        onChange={onChange}
+        value={value}
+      >
         {renderCategoryOptions()}
       </select>
       {renderResetButton()}

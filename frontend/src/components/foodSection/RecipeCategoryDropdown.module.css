@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.dropDownSelect {
+  background-color: var(--background-blue);
+  border: 1px solid var(--dark-green);
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.resetButton {
+  background: transparent;
+  border: none;
+  color: var(--green);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.resetButtonContainer {
+  margin-left: 20px;
+}
