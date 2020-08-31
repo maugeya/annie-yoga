@@ -28,23 +28,6 @@ export default function FoodSection({ recipes }) {
     setSelectValue(e.target.value)
   }
 
-  const renderCategoryOptions = () => {
-    return (
-      <>
-        <option disabled value="ALL">
-          --Select a category--
-        </option>
-        {allCategories.map((category, i) => {
-          return (
-            <option key={i} value={category.id}>
-              {category.name}
-            </option>
-          )
-        })}
-      </>
-    )
-  }
-
   const renderRecipes = () => {
     if (!filteredCategory) {
       return allCategories.map((category, i) => (
@@ -107,9 +90,11 @@ export default function FoodSection({ recipes }) {
         <section className="sectionContainer">
           <SectionHeader title="Recipes" />
           <SectionText>
-            <select onChange={handleOnChangeDropdown} value={selectValue}>
-              {renderCategoryOptions()}
-            </select>
+            <RecipeCategoryDropdown
+              allCategories={allCategories}
+              onChange={handleOnChangeDropdown}
+              value={selectValue}
+            />
             {renderResetButton()}
             {renderRecipes()}
           </SectionText>
