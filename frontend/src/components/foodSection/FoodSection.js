@@ -13,7 +13,10 @@ export default function FoodSection({ recipes }) {
   const [selectValue, setSelectValue] = useState("ALL")
 
   const getAllRecipeCategories = (recipes) => {
-    return recipes.map((recipe) => recipe.recipeCategory)
+    const allRecipeCategories = recipes.map((recipe) => recipe.recipeCategory)
+    return [
+      ...new Map(allRecipeCategories.map((item) => [item.id, item])).values(),
+    ]
   }
   const allCategories = getAllRecipeCategories(recipes)
 
