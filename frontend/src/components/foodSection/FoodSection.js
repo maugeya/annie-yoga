@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 import Layout from "../layout/Layout"
 import SectionHeader from "../common/sectionHeader/SectionHeader"
@@ -7,6 +7,8 @@ import ParallaxImage from "../common/parallaxImage/ParallaxImage"
 import foodParallax from "../../assets/food-parallax.jpg"
 import RecipeCategorySection from "./RecipeCategorySection"
 import RecipeCategoryDropdown from "./RecipeCategoryDropdown"
+import SectionDivider from "../common/sectionDivider/SectionDivider"
+import styles from "./FoodSection.module.css"
 
 export default function FoodSection({ recipes }) {
   const [filteredCategory, setFilteredCategory] = useState()
@@ -82,6 +84,7 @@ export default function FoodSection({ recipes }) {
         <section className="sectionContainer">
           <SectionHeader title="Recipes" />
           <SectionText>
+            <h3 className={styles.recipeSearchTitle}>Search recipes</h3>
             <RecipeCategoryDropdown
               allCategories={allCategories}
               filteredCategory={filteredCategory}
@@ -89,6 +92,7 @@ export default function FoodSection({ recipes }) {
               onResetClick={handleResetButtonClick}
               value={selectValue}
             />
+            <SectionDivider />
             {renderRecipes()}
           </SectionText>
         </section>
