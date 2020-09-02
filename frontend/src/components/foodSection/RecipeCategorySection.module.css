@@ -1,3 +1,23 @@
 .container {
+  border-bottom: 3px solid red;
   margin: 40px 0;
+}
+
+.imageContainer {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  height: 300px;
+  width: 400px;
+}
+
+.imageContainer > img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.recipeCategoryHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

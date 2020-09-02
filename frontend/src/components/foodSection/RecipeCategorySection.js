@@ -9,9 +9,18 @@ export default function RecipeCategorySection({
 }) {
   return (
     <div className={styles.container}>
-      <h3>{category.name}</h3>
-      <p>{category.description}</p>
-      <ul>
+      <div className={styles.recipeCategoryHeader}>
+        <div className={styles.recipeCategoryName}>
+          <h3>{category.name}</h3>
+        </div>
+        <div className={styles.imageContainer}>
+          <img src={category.s3Url} />
+        </div>
+        <div className={styles.recipeCategoryDecription}>
+          <p>{category.description}</p>
+        </div>
+      </div>
+      <ul className={styles.recipesList}>
         {recipesForCategory.map((recipe, i) => (
           <li key={i}>
             <Link to={`/food/${recipe.id}`} className="inlineLink">
