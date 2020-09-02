@@ -24,9 +24,11 @@ class RecipeSerializer(serializers.ModelSerializer):
         return get_presigned_url(AWS_STORAGE_BUCKET_NAME, file_name)
 
     def get_recipe_category(self, obj):
+        file_name = obj.recipe_category.image.file.name
         recipe_category_object = {
             'id': obj.recipe_category.id,
             'name': obj.recipe_category.name,
+            's3_url': get_presigned_url(AWS_STORAGE_BUCKET_NAME, file_name)
         }
 
         if obj.recipe_category.description:
