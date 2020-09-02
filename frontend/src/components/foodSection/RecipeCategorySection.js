@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 import styles from "./RecipeCategorySection.module.css"
+import SectionDivider from "../common/sectionDivider/SectionDivider"
 
 export default function RecipeCategorySection({
   category,
@@ -29,6 +30,7 @@ export default function RecipeCategorySection({
           </li>
         ))}
       </ul>
+      <SectionDivider />
     </div>
   )
 }

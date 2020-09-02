@@ -1,5 +1,4 @@
 .container {
-  border-bottom: 3px solid red;
   margin: 40px 0;
 }
 
@@ -20,4 +19,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.recipeCategoryHeader > div:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.recipesList {
+  font-size: 20px;
 }
