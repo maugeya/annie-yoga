@@ -20,7 +20,7 @@ const useFetch = (url, options) => {
       }
     }
     fetchData()
-  }, [])
+  }, [url])
 
   return { data, error, isLoading }
 }

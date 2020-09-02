@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import "./App.css"
@@ -11,22 +11,30 @@ import CorporateRoute from "./components/corporate/CorporateRoute"
 import FoodRoute from "./components/food/FoodRoute"
 import BlogRoute from "./components/blog/BlogRoute"
 import RetreatLocationDetailRoute from "./components/retreatDetails/RetreatLocationDetailRoute"
+import RecipeDetailRoute from "./components/recipeDetail/RecipeDetailRoute"
 import useScroll from "./hooks/useScroll"
 import useFetch from "./hooks/useFetch"
 import Footer from "./components/footer/Footer"
 import {
   getUniqueRetreatLocations,
   getDatesForRetreatLocation,
+  useFetchRetreats,
 } from "./utils/retreats"
+import { useFetchRecipes } from "./utils/recipes"
 
 function App() {
   const scrollYPercentage = useScroll()
-  const res = useFetch("http://localhost:8000/retreats/", {})
-  if (res.error.length) console.log("ERROR WIP", res.error)
 
-  const retreats = res.data
-  const isLoading = res.isLoading
+  useEffect(() => {})
+  const getRetreats = useFetchRetreats()
+  const { retreats, isLoadingRetreats, retreatsError } = getRetreats
+  if (retreatsError.length) console.log("ERROR WIP", retreatsError)
+
   const uniqueRetreatLocations = getUniqueRetreatLocations(retreats)
+
+  const getRecipes = useFetchRecipes()
+  const { recipes, isLoadingRecipes, recipesError } = getRecipes
+  if (recipesError.length) console.log("ERROR WIP", recipesError)
 
   return (
     <Router>
@@ -45,11 +53,16 @@ function App() {
           <Route path="/corporate">
             <CorporateRoute />
           </Route>
-          <Route path="/food">
-            <FoodRoute />
+          <Route exact path="/food">
+            <FoodRoute recipes={recipes} isLoading={isLoadingRecipes} />
           </Route>
+          {recipes.map((recipe, i) => (
+            <Route path={`/food/${recipe.id}`} key={i}>
+              <RecipeDetailRoute recipe={recipe} />
+            </Route>
+          ))}
           <Route exact path="/retreats">
-            <RetreatsRoute retreats={retreats} isLoading={isLoading} />
+            <RetreatsRoute retreats={retreats} isLoading={isLoadingRetreats} />
           </Route>
           {uniqueRetreatLocations.map((retreatLocation, i) => (
             <Route path={`/retreats/${retreatLocation.id}`} key={i}>
