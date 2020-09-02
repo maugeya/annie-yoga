@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import "./App.css"
@@ -13,7 +13,6 @@ import BlogRoute from "./components/blog/BlogRoute"
 import RetreatLocationDetailRoute from "./components/retreatDetails/RetreatLocationDetailRoute"
 import RecipeDetailRoute from "./components/recipeDetail/RecipeDetailRoute"
 import useScroll from "./hooks/useScroll"
-import useFetch from "./hooks/useFetch"
 import Footer from "./components/footer/Footer"
 import {
   getUniqueRetreatLocations,
