@@ -6,6 +6,7 @@ from file.models import FileOnS3
 class RecipeCategory(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True)
+    image = models.ForeignKey(FileOnS3, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
