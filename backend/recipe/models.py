@@ -42,7 +42,8 @@ class Recipe(models.Model):
     recipe_ingredient = models.ManyToManyField(
         RecipeIngredient, related_name="recipe")
     method = models.TextField()
-    image = models.ForeignKey(FileOnS3, on_delete=models.CASCADE)
+    image = models.ForeignKey(
+        FileOnS3, on_delete=models.CASCADE, blank=True, null=True)
     recipe_category = models.ForeignKey(
         RecipeCategory, on_delete=models.CASCADE)
 
