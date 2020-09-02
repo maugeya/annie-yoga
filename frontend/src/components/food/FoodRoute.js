@@ -2,7 +2,6 @@ import React from "react"
 
 import JumboImageContainer from "../common/jumboImageContainer/JumboImageContainer"
 import FoodSection from "../foodSection/FoodSection"
-import useFetch from "../../hooks/useFetch"
 import LoadingSpinner from "../common/loadingSpinner/LoadingSpinner"
 
 export default function FoodRoute({ recipes, isLoading }) {
