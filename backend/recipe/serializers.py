@@ -18,6 +18,8 @@ class RecipeSerializer(serializers.ModelSerializer):
                   'image_s3', 'recipe_category')
 
     def get_image_s3(self, obj):
+        if not obj.image:
+            return
         file_name = obj.image.file.name
         return get_presigned_url(AWS_STORAGE_BUCKET_NAME, file_name)
 
