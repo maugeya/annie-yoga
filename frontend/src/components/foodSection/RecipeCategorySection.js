@@ -21,7 +21,7 @@ export default function RecipeCategorySection({
           <p>{category.description}</p>
         </div>
       </div>
-      <ul className={styles.recipesList}>
+      <ul className={styles.recipeList}>
         {recipesForCategory.map((recipe, i) => (
           <li key={i}>
             <Link to={`/food/${recipe.id}`} className="inlineLink">
