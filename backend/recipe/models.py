@@ -48,6 +48,7 @@ class Recipe(models.Model):
         FileOnS3, on_delete=models.CASCADE, blank=True, null=True)
     recipe_category = models.ForeignKey(
         RecipeCategory, on_delete=models.CASCADE)
+    serving_amount = models.CharField(max_length=250, blank=True, null=True)
 
     def __str__(self):
         return self.title
