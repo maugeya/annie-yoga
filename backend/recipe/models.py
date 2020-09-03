@@ -34,7 +34,7 @@ class RecipeIngredient(models.Model):
     is_optional = models.BooleanField(default=False)
 
     def __str__(self):
-        return "{ingredient}, {amount}, {unit}".format(ingredient=self.ingredient, amount=self.amount, unit=self.unit)
+        return "{ingredient}, {amount}, {unit}, {is_optional}".format(ingredient=self.ingredient, amount=self.amount, unit=self.unit, is_optional=self.is_optional)
 
 
 class Recipe(models.Model):
