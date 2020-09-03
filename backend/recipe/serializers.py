@@ -51,3 +51,7 @@ class RecipeSerializer(serializers.ModelSerializer):
 
     def get_method(self, obj):
         return obj.method.split(": ")
+
+    def get_recipe_intro(self, obj):
+        intro = obj.recipe_intro.splitlines()
+        return [x for x in intro if x]
