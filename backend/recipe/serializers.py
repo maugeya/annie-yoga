@@ -11,11 +11,12 @@ class RecipeSerializer(serializers.ModelSerializer):
     recipe_category = serializers.SerializerMethodField()
     recipe_ingredients = serializers.SerializerMethodField()
     method = serializers.SerializerMethodField()
+    recipe_intro = serializers.SerializerMethodField()
 
     class Meta:
         model = Recipe
         fields = ('id', 'title', 'recipe_ingredients', 'method',
-                  'image_s3', 'recipe_category')
+                  'image_s3', 'recipe_category', 'recipe_intro')
 
     def get_image_s3(self, obj):
         if not obj.image:
