@@ -28,7 +28,8 @@ class Ingredient(models.Model):
 
 class RecipeIngredient(models.Model):
     ingredient = models.ForeignKey(Ingredient, on_delete=models.CASCADE)
-    amount = models.PositiveIntegerField(blank=True, null=True)
+    amount = models.DecimalField(
+        blank=True, null=True, max_digits=5, decimal_places=2)
     unit = models.ForeignKey(
         IngredientUnit, on_delete=models.CASCADE, blank=True, null=True)
     is_optional = models.BooleanField(default=False)
