@@ -8,7 +8,7 @@ export default function RecipeDetailRoute({ recipe }) {
       <JumboImageContainer
         headerTitle={recipe.title}
         centerTextOverlay
-        imageUrl={recipe.imageS3}
+        imageUrl={recipe.imageS3 ? recipe.imageS3 : recipe.recipeCategory.s3Url}
       />
       <RecipeDetailSection recipe={recipe} />
     </div>
