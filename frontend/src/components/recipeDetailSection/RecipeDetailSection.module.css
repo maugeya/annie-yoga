@@ -2,6 +2,11 @@
   text-align: justify;
 }
 
-.recipeIntroSection {
+.recipeIntroSection,
+.recipeIngredientSection {
   margin-bottom: 60px;
+}
+
+.ingredientOptional {
+  font-weight: bold;
 }
