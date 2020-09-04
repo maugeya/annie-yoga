@@ -5,6 +5,8 @@ from .models import (Recipe, RecipeIngredient, Ingredient,
 
 class RecipeAdmin(admin.ModelAdmin):
     model = Recipe
+    list_display = ('title', 'recipe_category')
+    list_filter = ('recipe_category', )
     filter_horizontal = ('recipe_ingredient',)
 
 
