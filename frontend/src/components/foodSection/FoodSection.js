@@ -34,13 +34,23 @@ export default function FoodSection({ recipes }) {
   }
 
   const renderRecipes = () => {
+    const renderSectionDivide = (allCategories, i) => {
+      if (allCategories.length === i + 1) {
+        return
+      }
+      return <SectionDivider />
+    }
+
     if (!filteredCategory) {
       return allCategories.map((category, i) => (
-        <RecipeCategorySection
-          category={category}
-          recipesForCategory={getRecipesForCategory(category.id, recipes)}
-          key={i}
-        />
+        <>
+          <RecipeCategorySection
+            category={category}
+            recipesForCategory={getRecipesForCategory(category.id, recipes)}
+            key={i}
+          />
+          {renderSectionDivide(allCategories, i)}
+        </>
       ))
     }
     return (
