@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import "./App.css"
@@ -20,11 +20,12 @@ import {
   useFetchRetreats,
 } from "./utils/retreats"
 import { useFetchRecipes } from "./utils/recipes"
+import Burger from "./components/burger/Burger"
+import BurgerMenu from "./components/burgerMenu/BurgerMenu"
 
 function App() {
-  const scrollYPercentage = useScroll()
+  const [openMenu, setOpenMenu] = useState(false)
 
-  useEffect(() => {})
   const getRetreats = useFetchRetreats()
   const { retreats, isLoadingRetreats, retreatsError } = getRetreats
   if (retreatsError.length) console.log("ERROR WIP", retreatsError)
@@ -38,10 +39,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar
-          scrollYPercentage={scrollYPercentage}
-          retreatLocations={uniqueRetreatLocations}
-        />
+        <div>
+          <Burger open={openMenu} setOpen={setOpenMenu} />
+          <BurgerMenu open={openMenu} />
+        </div>
         <Switch>
           <Route path="/blog">
             <BlogRoute />
