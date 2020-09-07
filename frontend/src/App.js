@@ -44,7 +44,11 @@ function App() {
       <div className="App">
         <div ref={node}>
           <Burger open={openMenu} setOpen={setOpenMenu} />
-          <BurgerMenu open={openMenu} setOpen={setOpenMenu} />
+          <BurgerMenu
+            open={openMenu}
+            setOpen={setOpenMenu}
+            retreatLocations={uniqueRetreatLocations}
+          />
         </div>
         <Switch>
           <Route path="/blog">
