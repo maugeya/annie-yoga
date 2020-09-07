@@ -37,12 +37,16 @@
 .menuLinks {
   font-size: 2rem;
   text-transform: uppercase;
-  padding: 1.4rem 0;
   font-weight: bold;
   letter-spacing: 0.5rem;
   color: var(--primary-light);
   text-decoration: none;
   transition: color 0.3s linear;
+}
+
+.menuLinks,
+.reteatLinkContainer {
+  padding: 1.4rem 0;
 }
 
 .menuLinks:hover,
@@ -62,13 +66,16 @@
 }
 
 .retreatMenuList {
-  display: none;
-  transition: visibility 0s, opacity 0.5s linear;
+  height: 0;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  overflow: hidden;
 }
 
 .showRetreatMenuList {
-  display: flex;
-  flex-direction: column;
+  height: auto;
+  opacity: 1;
+  width: 100%;
 }
 
 .retreatMenuList > a:not(:last-child) {
@@ -77,6 +84,7 @@
 
 .retreatMenuListItem {
   color: var(--primary-light);
+  display: block;
   font-size: 1.2rem;
   padding-top: 1rem;
   text-decoration: none;

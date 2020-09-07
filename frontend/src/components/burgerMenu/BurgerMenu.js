@@ -33,6 +33,7 @@ const BurgerMenu = ({ open, setOpen, retreatLocations }) => {
           Classes
         </Link>
         <div
+          className={styles.reteatLinkContainer}
           onMouseEnter={() => setShowSubMenu(true)}
           onMouseLeave={() => setShowSubMenu(false)}
         >
