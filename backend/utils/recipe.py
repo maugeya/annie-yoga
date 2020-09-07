@@ -1,6 +1,6 @@
 def format_ingredient_amount(num):
     if num == 0.5:
-        return "Half"
+        return "Half a"
     else:
         return str(int(num))
 
