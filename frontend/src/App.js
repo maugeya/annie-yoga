@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useRef, useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import "./App.css"
@@ -21,9 +21,13 @@ import {
 import { useFetchRecipes } from "./utils/recipes"
 import Burger from "./components/burger/Burger"
 import BurgerMenu from "./components/burgerMenu/BurgerMenu"
+import { useOnClickOutside } from "./hooks/useOnClickOutside"
 
 function App() {
   const [openMenu, setOpenMenu] = useState(false)
+
+  const node = useRef()
+  useOnClickOutside(node, () => setOpenMenu(false))
 
   const getRetreats = useFetchRetreats()
   const { retreats, isLoadingRetreats, retreatsError } = getRetreats
@@ -38,7 +42,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div>
+        <div ref={node}>
           <Burger open={openMenu} setOpen={setOpenMenu} />
           <BurgerMenu open={openMenu} />
         </div>
