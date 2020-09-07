@@ -1,12 +1,13 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   background: var(--primary-dark);
   height: 100vh;
   text-align: left;
   padding: 2rem;
   position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
@@ -18,9 +19,19 @@
   transform: translateX(0);
 }
 
+.linkContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 .logo {
   height: 60px;
   width: 150px;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .menuLinks {
@@ -47,4 +58,15 @@
     font-size: 1.5rem;
     text-align: center;
   }
+}
+
+.container::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
