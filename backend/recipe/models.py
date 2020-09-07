@@ -39,11 +39,13 @@ class RecipeIngredient(models.Model):
 
 
 class Recipe(models.Model):
-    recipe_intro = models.TextField(blank=True)
+    recipe_intro = models.TextField(
+        blank=True, help_text="Separate method steps by adding newline inbetween paragraphs")
     title = models.CharField(max_length=500)
     recipe_ingredient = models.ManyToManyField(
         RecipeIngredient, related_name="recipe")
-    method = models.TextField()
+    method = models.TextField(
+        help_text="Separate method steps by adding : inbetween e.g Wash rice: cover with water and cook")
     image = models.ForeignKey(
         FileOnS3, on_delete=models.CASCADE, blank=True, null=True)
     recipe_category = models.ForeignKey(
