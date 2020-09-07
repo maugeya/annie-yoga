@@ -55,7 +55,7 @@ export default function RetreatLocationDetailSection({
               <p key={i}>{paragraph}</p>
             ))}
           </div>
-          <div className={styles.retreatTestimonial}>
+          <div>
             <Testimonial>
               <p>{testimonial1}</p>
             </Testimonial>
@@ -125,7 +125,7 @@ export default function RetreatLocationDetailSection({
         </section>
       )}
       <section>
-        <div className={styles.retreatTestimonial}>
+        <div className={styles.secondRetreatTestimonial}>
           <Testimonial>
             <p>{testimonial2}</p>
           </Testimonial>
