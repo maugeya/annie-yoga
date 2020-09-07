@@ -7,25 +7,27 @@ export default function Burger({ open, setOpen }) {
     setOpen(!open)
   }
 
-  const firstLinePosition = open
-    ? styles.firstLinePositionOpen
-    : styles.firstLinePositionClosed
-  const secondLinePosition = open
-    ? styles.secondLinePositionOpen
-    : styles.secondLinePositionClosed
-  const thirdLinePosition = open
-    ? styles.thirdLinePositionOpen
-    : styles.thirdLinePositionClosed
-
   return (
     <button
       className={styles.container}
       open={open}
       onClick={handleBurgerClick}
     >
-      <div className={`${firstLinePosition}`} />
-      <div className={`${secondLinePosition}`} />
-      <div className={`${thirdLinePosition}`} />
+      <div
+        className={`${
+          open ? styles.firstLinePositionOpen : styles.firstLinePositionClosed
+        }`}
+      />
+      <div
+        className={`${
+          open ? styles.secondLinePositionOpen : styles.secondLinePositionClosed
+        }`}
+      />
+      <div
+        className={`${
+          open ? styles.thirdLinePositionOpen : styles.thirdLinePositionClosed
+        }`}
+      />
     </button>
   )
 }
