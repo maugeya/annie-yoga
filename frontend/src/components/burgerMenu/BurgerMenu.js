@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 
 import styles from "./BurgerMenu.module.css"
 
-const BurgerMenu = ({ open, setOpen }) => {
+const BurgerMenu = ({ open, setOpen, retreatLocations }) => {
+  const [showSubMenu, setShowSubMenu] = useState(false)
   const menuPostitionStyles = open ? styles.open : ""
+  const showSubMenuStyles = showSubMenu ? styles.showRetreatMenuList : ""
 
   return (
     <nav className={`${styles.container} ${menuPostitionStyles}`} open={open}>
@@ -30,13 +32,31 @@ const BurgerMenu = ({ open, setOpen }) => {
         >
           Classes
         </Link>
-        <Link
-          className={styles.menuLinks}
-          to="/retreats"
-          onClick={() => setOpen(false)}
+        <div
+          onMouseEnter={() => setShowSubMenu(true)}
+          onMouseLeave={() => setShowSubMenu(false)}
         >
-          Retreats
-        </Link>
+          <Link
+            className={styles.menuLinks}
+            to="/retreats"
+            onClick={() => setOpen(false)}
+          >
+            Retreats
+          </Link>
+          <div className={`${styles.retreatMenuList} ${showSubMenuStyles}`}>
+            {retreatLocations.map((retreatLocation, i) => (
+              <Link
+                className={styles.retreatMenuListItem}
+                key={i}
+                to={`/retreats/${retreatLocation.id}`}
+                onClick={() => setOpen(false)}
+              >
+                {retreatLocation.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
         <Link
           className={styles.menuLinks}
           to="/corporate"

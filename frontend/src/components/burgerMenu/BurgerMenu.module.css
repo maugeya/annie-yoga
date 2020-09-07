@@ -37,7 +37,7 @@
 .menuLinks {
   font-size: 2rem;
   text-transform: uppercase;
-  padding: 2rem 0;
+  padding: 1.4rem 0;
   font-weight: bold;
   letter-spacing: 0.5rem;
   color: var(--primary-light);
@@ -45,7 +45,8 @@
   transition: color 0.3s linear;
 }
 
-.menuLinks:hover {
+.menuLinks:hover,
+.retreatMenuListItem:hover {
   color: var(--gold);
 }
 
@@ -58,6 +59,28 @@
     font-size: 1.5rem;
     text-align: center;
   }
+}
+
+.retreatMenuList {
+  display: none;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.showRetreatMenuList {
+  display: flex;
+  flex-direction: column;
+}
+
+.retreatMenuList > a:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.retreatMenuListItem {
+  color: var(--primary-light);
+  font-size: 1.2rem;
+  padding-top: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .container::-webkit-scrollbar {
