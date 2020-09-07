@@ -1,0 +1,55 @@
+.container {
+  position: fixed;
+  top: 5%;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.container:focus {
+  outline: none;
+}
+
+.container > div {
+  width: 2rem;
+  height: 0.25rem;
+  background: var(--gold);
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.firstLinePositionOpen {
+  transform: rotate(45deg);
+}
+
+.firstLinePositionClosed {
+  transform: rotate(0);
+}
+
+.secondLinePositionOpen {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.secondLinePositionClosed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.thirdLinePositionOpen {
+  transform: rotate(-45deg);
+}
+
+.thirdLinePositionClosed {
+  transform: rotate(0);
+}

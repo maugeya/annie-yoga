@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--primary-dark);
+  height: 100vh;
+  text-align: left;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.logo {
+  height: 60px;
+  width: 150px;
+}
+
+.menuLinks {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  color: var(--primary-light);
+  text-decoration: none;
+  transition: color 0.3s linear;
+}
+
+.menuLinks:hover {
+  color: var(--gold);
+}
+
+@media only screen and (max-width: 567px) {
+  .container {
+    width: 100%;
+  }
+
+  .menuLinks {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
