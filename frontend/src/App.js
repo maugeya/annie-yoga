@@ -12,7 +12,6 @@ import FoodRoute from "./components/food/FoodRoute"
 import BlogRoute from "./components/blog/BlogRoute"
 import RetreatLocationDetailRoute from "./components/retreatDetails/RetreatLocationDetailRoute"
 import RecipeDetailRoute from "./components/recipeDetail/RecipeDetailRoute"
-import useScroll from "./hooks/useScroll"
 import Footer from "./components/footer/Footer"
 import {
   getUniqueRetreatLocations,
