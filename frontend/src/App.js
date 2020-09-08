@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import "./App.css"
 import "./styles/common.css"
-import NavBar from "./components/navigation/NavBar"
 import HomeRoute from "./components/home/HomeRoute"
 import ClassesRoute from "./components/classes/ClassesRoute"
 import RetreatsRoute from "./components/retreats/RetreatsRoute"
@@ -21,6 +20,7 @@ import {
 import { useFetchRecipes } from "./utils/recipes"
 import Burger from "./components/burger/Burger"
 import BurgerMenu from "./components/burgerMenu/BurgerMenu"
+import ScrollToTop from "./components/scrollToTop/ScrollToTop"
 import { useOnClickOutside } from "./hooks/useOnClickOutside"
 
 function App() {
@@ -41,6 +41,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <div ref={node}>
           <Burger open={openMenu} setOpen={setOpenMenu} />
