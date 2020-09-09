@@ -1,11 +1,11 @@
 .container {
   align-items: center;
-  background-color: var(--primary-dark);
-  color: var(--primary-light);
+  background-color: var(--footer-grey);
+  color: var(--primary-dark);
   display: flex;
   height: 80px;
   justify-content: space-between;
-  padding: 8px 40px;
+  padding: 0.6rem 2.6rem;
 }
 
 .contributers {
