@@ -42,7 +42,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="App">
+      <div className="App" role="main">
         <div ref={node}>
           <Burger open={openMenu} setOpen={setOpenMenu} />
           <BurgerMenu
