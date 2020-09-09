@@ -87,6 +87,7 @@ function App() {
             <HomeRoute />
           </Route>
         </Switch>
+        <div className="footerSeparator" />
         <Footer />
       </div>
     </Router>

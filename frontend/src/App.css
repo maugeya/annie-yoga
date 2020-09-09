@@ -21,6 +21,20 @@
   text-align: center;
 }
 
+.footerSeparator {
+  border: 0;
+  height: 1px;
+  background: var(--primary-dark);
+  background: -webkit-gradient(
+    linear,
+    0 0,
+    100% 0,
+    from(var(--light-grey)),
+    to(var(--light-grey)),
+    color-stop(50%, var(--primary-dark))
+  );
+}
+
 body {
   color: var(--primary-dark);
   font-family: "Didact Gothic", sans-serif;
