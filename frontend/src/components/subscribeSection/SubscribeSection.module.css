@@ -1,2 +1,9 @@
+.container {
+  background-color: var(--footer-grey);
+  height: 40vh;
+  padding: 2.6rem;
+}
+
 .sectionHeader {
   margin-bottom: 1.6rem;
+}
