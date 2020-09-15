@@ -19,12 +19,29 @@ export default function SubscribeSection() {
           yoga info, would you like it? Sign up here:
         </p>
       </div>
-
-      <form className={formStyles.form} onSubmit={handleSubmit}>
-        <AppInput type="email" label="Email:" />
-        <div className={formStyles.formSubmit}>
-          <SubmitButton title="Subscribe" />
-        </div>
+      <form
+        action="https://tinyletter.com/anniemayrice"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://tinyletter.com/anniemayrice', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+      >
+        <p>
+          <label for="tlemail">Enter your email address</label>
+        </p>
+        <p>
+          <AppInput type="text" name="email" id="tlemail" aria-label="email" />
+        </p>
+        <input type="hidden" value="1" name="embed" />
+        <SubmitButton type="submit" title="Subscribe" />
+        <p>
+          <a
+            href="https://tinyletter.com"
+            target="_blank"
+            className="inlineLink"
+          >
+            powered by TinyLetter
+          </a>
+        </p>
       </form>
     </div>
   )
