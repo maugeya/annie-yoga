@@ -12,6 +12,7 @@ export default function SubscribeSection() {
 
   return (
     <div className={styles.container}>
+      <h3 className={styles.sectionHeader}>Subscribe</h3>
       <div className={styles.textContainer}>
         <p>
           I send out a monthly or so email with thoughts and recipes, links and
